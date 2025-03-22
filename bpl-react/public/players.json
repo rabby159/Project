@@ -70,14 +70,5 @@
     "player_position": "Defender",
     "price": 400000,
     "jersey_no": 71
-  },
-  {
-    "id": 9,
-    "player_name": "Saad Uddin",
-    "player_image_url": "https://i.postimg.cc/NjT6Msz4/482772498-18065618512934282-8211565481243403509-n.jpg",
-    "player_country": "Bangladesh",
-    "player_position": "Midfielder",
-    "price": 450000,
-    "jersey_no": 56
   }
 ]

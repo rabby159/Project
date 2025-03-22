@@ -3,9 +3,9 @@ import BannerLogo from "../../assets/image 1.png";
 
 const Banner = () => {
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl m-auto">
       <div
-        className="hero min-h-full rounded-3xl"
+        className="hero rounded-3xl"
         style={{
           backgroundImage: "url(https://i.postimg.cc/m24jgHc2/Group-3.png)",
         }}
