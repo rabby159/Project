@@ -1,74 +1,83 @@
 [
   {
+    "id": 1,
     "player_name": "Lionel Messi",
     "player_image_url": "https://i.postimg.cc/nLB06Yxn/453434335-995284149267016-5145163369333307892-n.jpg",
     "player_country": "Argentina",
     "player_position": "Forward",
     "price": 80000000,
-    "jersey": 33
+    "jersey_no": 33
   },
   {
+    "id": 2,
     "player_name": "Cristiano Ronaldo",
     "player_image_url": "https://i.postimg.cc/vBy3Mg8f/cristiano-ronaldo-of-portugal-reacts-as-he-looks-on-during-news-photo-1725633476.avif",
     "player_country": "Portugal",
     "player_position": "Forward",
     "price": 75000000,
-    "jersey": 7
+    "": 7
   },
   {
+    "id": 3,
     "player_name": "Neymar Jr",
     "player_image_url": "https://i.postimg.cc/prXChwFd/5406b27576c4b73140a9d449820e0e5b.jpg",
     "player_country": "Brazil",
     "player_position": "Forward",
     "price": 70000000,
-    "jersey": 9
+    "jersey_no": 9
   },
   {
+    "id": 4,
     "player_name": "Kylian Mbappe",
     "player_image_url": "https://i.postimg.cc/9Qqp7try/344333920-1289101771735239-3697256134799320293-n.jpg",
     "player_country": "France",
     "player_position": "Forward",
     "price": 90000000,
-    "jersey": 4
+    "jersey_no": 4
   },
   {
+    "id": 5,
     "player_name": "Kevin De Bruyne",
     "player_image_url": "https://i.postimg.cc/q7sxmJcR/472818040-1163117355176525-3753903244779908373-n.jpg",
     "player_country": "Belgium",
     "player_position": "Midfielder",
     "price": 85000000,
-    "jersey": 93
+    "jersey_no": 93
   },
   {
+    "id": 6,
     "player_name": "Virgil van Dijk",
     "player_image_url": "https://i.postimg.cc/pTkYHs6M/52979966-1199062953594685-2643129333589213184-n.jpg",
     "player_country": "Netherlands",
     "player_position": "Defender",
     "price": 70000000,
-    "jersey": 91
+    "jersey_no": 91
   },
   {
+    "id": 7,
     "player_name": "Jamal Bhuiyan",
     "player_image_url": "https://i.postimg.cc/3NRjJ2s4/455186615-1056319459189957-2715922965048225613-n.jpg",
     "player_country": "Bangladesh",
     "player_position": "Midfielder",
     "price": 500000,
-    "jersey": 10
+    "jersey_no": 10
   },
   {
+    "id": 8,
     "player_name": "Topu Barman",
     "player_image_url": "https://i.postimg.cc/DyRQnJB0/277007881-519332426221997-2140452853176606812-n.jpg",
     "player_country": "Bangladesh",
     "player_position": "Defender",
     "price": 400000,
-    "jersey": 71
+    "jersey_no": 71
   },
   {
+    "id": 9,
     "player_name": "Saad Uddin",
     "player_image_url": "https://i.postimg.cc/NjT6Msz4/482772498-18065618512934282-8211565481243403509-n.jpg",
     "player_country": "Bangladesh",
     "player_position": "Midfielder",
     "price": 450000,
-    "jersey": 56
+    "jersey_no": 56
   }
 ]

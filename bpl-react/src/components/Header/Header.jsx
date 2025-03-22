@@ -1,5 +1,5 @@
 import React from "react";
-import logo from '../../assets/Group 1.png'
+import logo from "../../assets/football.png";
 
 const Header = () => {
   return (
@@ -47,7 +47,9 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <a className=""><img src={logo} alt="img" /></a>
+          <a className="w-32">
+            <img src={logo} alt="img" />
+          </a>
         </div>
         <div className="navbar-end hidden lg:flex">
           <ul className="menu menu-horizontal px-1 mr-5">
