@@ -15,7 +15,7 @@
     "player_country": "Portugal",
     "player_position": "Forward",
     "price": 75000000,
-    "": 7
+    "jersey_no": 7
   },
   {
     "id": 3,
@@ -45,15 +45,6 @@
     "jersey_no": 93
   },
   {
-    "id": 6,
-    "player_name": "Virgil van Dijk",
-    "player_image_url": "https://i.postimg.cc/pTkYHs6M/52979966-1199062953594685-2643129333589213184-n.jpg",
-    "player_country": "Netherlands",
-    "player_position": "Defender",
-    "price": 70000000,
-    "jersey_no": 91
-  },
-  {
     "id": 7,
     "player_name": "Jamal Bhuiyan",
     "player_image_url": "https://i.postimg.cc/3NRjJ2s4/455186615-1056319459189957-2715922965048225613-n.jpg",
@@ -70,5 +61,14 @@
     "player_position": "Defender",
     "price": 400000,
     "jersey_no": 71
+  },
+  {
+    "id": 6,
+    "player_name": "Virgil van Dijk",
+    "player_image_url": "https://i.postimg.cc/pTkYHs6M/52979966-1199062953594685-2643129333589213184-n.jpg",
+    "player_country": "Netherlands",
+    "player_position": "Defender",
+    "price": 70000000,
+    "jersey_no": 91
   }
 ]

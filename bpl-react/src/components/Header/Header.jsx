@@ -47,9 +47,8 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <a className="w-32">
-            <img src={logo} alt="img" />
-          </a>
+
+          <img className="w-28" src={logo} alt="img" />
         </div>
         <div className="navbar-end hidden lg:flex">
           <ul className="menu menu-horizontal px-1 mr-5">
