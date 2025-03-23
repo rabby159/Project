@@ -24,7 +24,7 @@
     "player_country": "Brazil",
     "player_position": "Forward",
     "price": 70000000,
-    "jersey_no": 9
+    "jersey_no": 10
   },
   {
     "id": 4,
@@ -51,7 +51,7 @@
     "player_country": "Bangladesh",
     "player_position": "Midfielder",
     "price": 500000,
-    "jersey_no": 10
+    "jersey_no": 6
   },
   {
     "id": 8,
@@ -60,7 +60,7 @@
     "player_country": "Bangladesh",
     "player_position": "Defender",
     "price": 400000,
-    "jersey_no": 71
+    "jersey_no": 4
   },
   {
     "id": 6,
