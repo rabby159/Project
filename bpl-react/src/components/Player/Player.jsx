@@ -12,7 +12,7 @@ const Player = ({ player }) => {
   } = player;
 
   return (
-    <div className="">
+    <div>
       <div className="card bg-base-100 w-96 shadow-sm shadow-blue-300">
         <figure className="px-10 pt-10">
           <img src={player_image_url} alt="Shoes" className="rounded-xl" />
@@ -21,7 +21,7 @@ const Player = ({ player }) => {
           <div className="">
             <h2 className="text-center font-semibold mb-2">{player_name}</h2>
           </div>
-          <div className="flex justify-between items-center border-b-2 border-amber-100 mb-3">
+          <div className="flex justify-between items-center border-b-2 border-blue-100 mb-3">
             <p className="text-sm font-medium">Country: {player_country}</p>
             <button className="btn mb-2">{player_position}</button>
           </div>
