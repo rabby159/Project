@@ -4,7 +4,7 @@ import logo from "../../assets/football.png";
 const Footer = () => {
   return (
     <div className="bg-blue-950">
-      <div className="flex justify-center pt-40">
+      <div className="flex justify-center">
         <img className="w-60" src={logo} alt="img" />
       </div>
       <footer className="footer sm:footer-horizontal p-10 max-w-7xl m-auto text-white">
