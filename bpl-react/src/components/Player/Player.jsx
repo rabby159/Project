@@ -13,7 +13,7 @@ const Player = ({ player }) => {
 
   return (
     <div>
-      <div className="card bg-base-100 w-96 shadow-sm shadow-blue-300">
+      <div className="card bg-base-100 shadow-sm shadow-blue-300 mx-2">
         <figure className="px-10 pt-10">
           <img src={player_image_url} alt="Shoes" className="rounded-xl" />
         </figure>
@@ -29,7 +29,7 @@ const Player = ({ player }) => {
           <p className="font-semibold my-1">Jersey No: {jersey_no}</p>
 
           <div className="card-actions flex justify-between items-center">
-            <h2 className="font-semibold">Price: { price}</h2>
+            <h2 className="font-semibold">Price: {price}</h2>
             <button className="btn btn-info text-white">Select</button>
           </div>
         </div>

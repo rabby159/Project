@@ -3,7 +3,7 @@ import BannerLogo from "../../assets/image 1.png";
 
 const Banner = () => {
   return (
-    <div className="max-w-7xl m-auto">
+    <div className="max-w-7xl md:m-auto mx-2">
       <div
         className="hero rounded-3xl"
         style={{

@@ -2,9 +2,11 @@ import React from "react";
 
 const Newsletter = () => {
   return (
-    <div className="max-w-7xl m-auto bg-gradient-to-r from-indigo-200 from-10% via-sky-50 via-50% to-emerald-200 to-90% text-center p-20 my-8">
+    <div className="max-w-7xl m-auto bg-gradient-to-r from-indigo-200 from-10% via-sky-50 via-50% to-emerald-200 to-90% text-center p-20 my-8 rounded-3xl">
       <h2 className="text-3xl font-bold">Subscribe to our Newsletter</h2>
-      <p className="text-sm font-light">Get the latest updates and news right in your inbox!</p>
+      <p className="text-sm font-light">
+        Get the latest updates and news right in your inbox!
+      </p>
 
       <div className="join mt-5">
         <div>
