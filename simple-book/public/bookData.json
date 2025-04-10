@@ -70,5 +70,14 @@
     "category": "Drama",
     "rating": 5.0,
     "image": "https://i.ibb.co.com/zS9jsdK/18144590.jpg"
+  },
+  {
+    "bookId": "3",
+    "title": "Binary Heartbeat",
+    "author": "Samira Chowdhury",
+    "tags": ["Sci-Fi", "Technology"],
+    "category": "Fiction",
+    "rating": 4.7,
+    "image": "https://i.ibb.co.com/MprDyVt/51-BIA4rrae-L-AC-UF1000-1000-QL80.jpg"
   }
 ]

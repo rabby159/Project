@@ -5,7 +5,7 @@ const Book = ({ book }) => {
   const { title, image, author, category, rating } = book;
   return (
     <div>
-      <div className="card bg-base-100 shadow-sm">
+      <div className="card bg-base-100 border-1 border-zinc-400 p-5 lg:h-[417px]">
         <figure className="py-10 bg-base-200">
           <img
             src={image}
