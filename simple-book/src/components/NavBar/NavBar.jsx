@@ -5,19 +5,19 @@ const NavBar = () => {
   const NavLinks = (
     <>
       <li>
-        <NavLink to='/'>Home</NavLink>
+        <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink to='/listedBooks'>Listed Books</NavLink>
+        <NavLink to="/listedBooks">Listed Books</NavLink>
       </li>
       <li>
-        <NavLink to='/dashboard'>Dashboard</NavLink>
+        <NavLink to="/dashboard">Dashboard</NavLink>
       </li>
     </>
   );
 
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -39,7 +39,7 @@ const NavBar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content rounded-box z-1 mt-3 p-2 shadow"
           >
             {NavLinks}
           </ul>
@@ -51,7 +51,7 @@ const NavBar = () => {
       </div>
       <div className="navbar-end">
         <a className="btn btn-success text-white">Sign In</a>
-        <a className="btn btn-info ml-3 text-white" >Sign Up</a>
+        <a className="btn btn-info ml-3 text-white">Sign Up</a>
       </div>
     </div>
   );

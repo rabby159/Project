@@ -1,0 +1,30 @@
+import React from "react";
+import { CiStar } from "react-icons/ci";
+
+const Book = ({ book }) => {
+  const { title, image, author, category, rating } = book;
+  return (
+    <div>
+      <div className="card bg-base-100 shadow-sm">
+        <figure className="py-10 bg-base-200">
+          <img
+            src={image}
+            alt="books"
+            className="rounded-xl w-[101px] h-[166px] "
+          />
+        </figure>
+        <div className="card-body">
+          <h2 className="text-xl font-bold">{title}</h2>
+          <p className="font-semibold">Author: {author}</p>
+          <div className="card-actions border-t-1 border-dashed border-b-zinc-400 pt-2 items-center">
+            <p>{category}</p>
+            <h3>{rating}</h3>
+            <CiStar className="text-xl" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Book;
