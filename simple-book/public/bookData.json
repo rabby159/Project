@@ -1,83 +1,119 @@
 [
   {
-    "bookId": "1",
+    "bookId": 1,
     "title": "Shadows of Tomorrow",
     "author": "Lina Das",
     "tags": ["Young Adult", "Adventure"],
     "category": "Fiction",
     "rating": 4.8,
-    "image": "https://i.ibb.co.com/khHN7Pk/9780143454212.jpg"
+    "image": "https://i.ibb.co.com/khHN7Pk/9780143454212.jpg",
+    "totalPages": 210,
+    "review": "'The Great Gatsby' by F. Scott Fitzgerald is a timeless masterpiece that delves into the decadence and disillusionment of the Jazz Age. Set in the Roaring Twenties, the novel unveils the enigmatic Jay Gatsby's extravagant parties, masking a pursuit of lost love. Narrated by Nick Carraway, the story explores themes of wealth, love, and the American Dream, drawing readers into a vivid portrayal of the glittering yet elusive world of the East and West Egg. Fitzgerald's prose is both poetic and haunting, weaving a compelling narrative that transcends its era. A poignant exploration of societal excess and the human condition, 'The Great Gatsby' remains a literary gem that resonates across generations.",
+    "publisher": "Allen & Unwin",
+    "yearOfPublishing": 1939
   },
   {
-    "bookId": "2",
+    "bookId": 2,
     "title": "Whispers in the Wind",
     "author": "Rayen Malik",
     "tags": ["Romance", "Drama"],
     "category": "Generic",
     "rating": 4.5,
-    "image": "https://i.ibb.co.com/0cv102J/To-Kill-a-Mockingbird.webp"
+    "review": "'The Great Gatsby' by F. Scott Fitzgerald is a timeless masterpiece that delves into the decadence and disillusionment of the Jazz Age. Set in the Roaring Twenties, the novel unveils the enigmatic Jay Gatsby's extravagant parties, masking a pursuit of lost love. Narrated by Nick Carraway, the story explores themes of wealth, love, and the American Dream, drawing readers into a vivid portrayal of the glittering yet elusive world of the East and West Egg. Fitzgerald's prose is both poetic and haunting, weaving a compelling narrative that transcends its era. A poignant exploration of societal excess and the human condition, 'The Great Gatsby' remains a literary gem that resonates across generations.",
+    "totalPages": 350,
+    "image": "https://i.ibb.co.com/0cv102J/To-Kill-a-Mockingbird.webp",
+    "publisher": "Allen & Unwin",
+    "yearOfPublishing": 1927
   },
   {
-    "bookId": "3",
+    "bookId": 3,
     "title": "Binary Heartbeat",
     "author": "Samira Chowdhury",
     "tags": ["Sci-Fi", "Technology"],
     "category": "Fiction",
     "rating": 4.7,
-    "image": "https://i.ibb.co.com/MprDyVt/51-BIA4rrae-L-AC-UF1000-1000-QL80.jpg"
+    "review": "'The Great Gatsby' by F. Scott Fitzgerald is a timeless masterpiece that delves into the decadence and disillusionment of the Jazz Age. Set in the Roaring Twenties, the novel unveils the enigmatic Jay Gatsby's extravagant parties, masking a pursuit of lost love. Narrated by Nick Carraway, the story explores themes of wealth, love, and the American Dream, drawing readers into a vivid portrayal of the glittering yet elusive world of the East and West Egg. Fitzgerald's prose is both poetic and haunting, weaving a compelling narrative that transcends its era. A poignant exploration of societal excess and the human condition, 'The Great Gatsby' remains a literary gem that resonates across generations.",
+    "totalPages": 110,
+    "image": "https://i.ibb.co.com/MprDyVt/51-BIA4rrae-L-AC-UF1000-1000-QL80.jpg",
+    "publisher": "Allen & Unwin",
+    "yearOfPublishing": 1936
   },
   {
-    "bookId": "4",
+    "bookId": 4,
     "title": "The Forgotten Isles",
     "author": "Nafi Rahman",
     "tags": ["Adventure", "Fantasy"],
     "category": "Romantic",
     "rating": 4.6,
-    "image": "https://i.ibb.co.com/tYSWRfG/catcherrye-edited-1-800x.png"
+    "review": "'The Great Gatsby' by F. Scott Fitzgerald is a timeless masterpiece that delves into the decadence and disillusionment of the Jazz Age. Set in the Roaring Twenties, the novel unveils the enigmatic Jay Gatsby's extravagant parties, masking a pursuit of lost love. Narrated by Nick Carraway, the story explores themes of wealth, love, and the American Dream, drawing readers into a vivid portrayal of the glittering yet elusive world of the East and West Egg. Fitzgerald's prose is both poetic and haunting, weaving a compelling narrative that transcends its era. A poignant exploration of societal excess and the human condition, 'The Great Gatsby' remains a literary gem that resonates across generations.",
+    "totalPages": 370,
+    "image": "https://i.ibb.co.com/tYSWRfG/catcherrye-edited-1-800x.png",
+    "publisher": "Allen & Unwin",
+    "yearOfPublishing": 1941
   },
   {
-    "bookId": "5",
+    "bookId": 5,
     "title": "Echoes of a Name",
     "author": "Tania Noor",
     "tags": ["Identity", "Drama"],
     "category": "Fiction",
     "rating": 4.9,
-    "image": "https://i.ibb.co.com/YdQDMpn/81me-ud-V63-L-AC-UF1000-1000-QL80.jpg"
+    "review": "'The Great Gatsby' by F. Scott Fitzgerald is a timeless masterpiece that delves into the decadence and disillusionment of the Jazz Age. Set in the Roaring Twenties, the novel unveils the enigmatic Jay Gatsby's extravagant parties, masking a pursuit of lost love. Narrated by Nick Carraway, the story explores themes of wealth, love, and the American Dream, drawing readers into a vivid portrayal of the glittering yet elusive world of the East and West Egg. Fitzgerald's prose is both poetic and haunting, weaving a compelling narrative that transcends its era. A poignant exploration of societal excess and the human condition, 'The Great Gatsby' remains a literary gem that resonates across generations.",
+    "totalPages": 311,
+    "image": "https://i.ibb.co.com/YdQDMpn/81me-ud-V63-L-AC-UF1000-1000-QL80.jpg",
+    "publisher": "Allen & Unwin",
+    "yearOfPublishing": 1865
   },
   {
-    "bookId": "6",
+    "bookId": 6,
     "title": "Neon Nights",
     "author": "Zahidul Islam",
     "tags": ["Thriller", "Mystery"],
     "category": "Scientific",
     "rating": 4.3,
-    "image": "https://i.ibb.co.com/xS8YvxL/81m-CE-uclx-L-UF1000-1000-QL80.jpg"
+    "review": "'The Great Gatsby' by F. Scott Fitzgerald is a timeless masterpiece that delves into the decadence and disillusionment of the Jazz Age. Set in the Roaring Twenties, the novel unveils the enigmatic Jay Gatsby's extravagant parties, masking a pursuit of lost love. Narrated by Nick Carraway, the story explores themes of wealth, love, and the American Dream, drawing readers into a vivid portrayal of the glittering yet elusive world of the East and West Egg. Fitzgerald's prose is both poetic and haunting, weaving a compelling narrative that transcends its era. A poignant exploration of societal excess and the human condition, 'The Great Gatsby' remains a literary gem that resonates across generations.",
+    "totalPages": 110,
+    "image": "https://i.ibb.co.com/xS8YvxL/81m-CE-uclx-L-UF1000-1000-QL80.jpg",
+    "publisher": "Allen & Unwin",
+    "yearOfPublishing": 1975
   },
   {
-    "bookId": "7",
+    "bookId": 7,
     "title": "The Last Leaf Falls",
     "author": "Ayesha Karim",
     "tags": ["Young Adult", "Romance"],
     "category": "Fiction",
     "rating": 4.7,
-    "image": "https://i.ibb.co.com/989qMRW/42844155.jpg"
+    "review": "'The Great Gatsby' by F. Scott Fitzgerald is a timeless masterpiece that delves into the decadence and disillusionment of the Jazz Age. Set in the Roaring Twenties, the novel unveils the enigmatic Jay Gatsby's extravagant parties, masking a pursuit of lost love. Narrated by Nick Carraway, the story explores themes of wealth, love, and the American Dream, drawing readers into a vivid portrayal of the glittering yet elusive world of the East and West Egg. Fitzgerald's prose is both poetic and haunting, weaving a compelling narrative that transcends its era. A poignant exploration of societal excess and the human condition, 'The Great Gatsby' remains a literary gem that resonates across generations.",
+    "totalPages": 410,
+    "image": "https://i.ibb.co.com/989qMRW/42844155.jpg",
+    "publisher": "Allen & Unwin",
+    "yearOfPublishing": 1971
   },
   {
-    "bookId": "8",
+    "bookId": 8,
     "title": "Path of the Phoenix",
     "author": "Ibrahim Sadiq",
     "tags": ["Fantasy", "Heroic"],
     "category": "Drama",
     "rating": 5.0,
-    "image": "https://i.ibb.co.com/zS9jsdK/18144590.jpg"
+    "review": "'The Great Gatsby' by F. Scott Fitzgerald is a timeless masterpiece that delves into the decadence and disillusionment of the Jazz Age. Set in the Roaring Twenties, the novel unveils the enigmatic Jay Gatsby's extravagant parties, masking a pursuit of lost love. Narrated by Nick Carraway, the story explores themes of wealth, love, and the American Dream, drawing readers into a vivid portrayal of the glittering yet elusive world of the East and West Egg. Fitzgerald's prose is both poetic and haunting, weaving a compelling narrative that transcends its era. A poignant exploration of societal excess and the human condition, 'The Great Gatsby' remains a literary gem that resonates across generations.",
+    "totalPages": 910,
+    "image": "https://i.ibb.co.com/zS9jsdK/18144590.jpg",
+    "publisher": "Allen & Unwin",
+    "yearOfPublishing": 1973
   },
   {
-    "bookId": "3",
+    "bookId": 9,
     "title": "Binary Heartbeat",
     "author": "Samira Chowdhury",
     "tags": ["Sci-Fi", "Technology"],
     "category": "Fiction",
     "rating": 4.7,
-    "image": "https://i.ibb.co.com/MprDyVt/51-BIA4rrae-L-AC-UF1000-1000-QL80.jpg"
+    "review": "'The Great Gatsby' by F. Scott Fitzgerald is a timeless masterpiece that delves into the decadence and disillusionment of the Jazz Age. Set in the Roaring Twenties, the novel unveils the enigmatic Jay Gatsby's extravagant parties, masking a pursuit of lost love. Narrated by Nick Carraway, the story explores themes of wealth, love, and the American Dream, drawing readers into a vivid portrayal of the glittering yet elusive world of the East and West Egg. Fitzgerald's prose is both poetic and haunting, weaving a compelling narrative that transcends its era. A poignant exploration of societal excess and the human condition, 'The Great Gatsby' remains a literary gem that resonates across generations.",
+    "totalPages": 150,
+    "image": "https://i.ibb.co.com/MprDyVt/51-BIA4rrae-L-AC-UF1000-1000-QL80.jpg",
+    "publisher": "Allen & Unwin",
+    "yearOfPublishing": 1937
   }
 ]
