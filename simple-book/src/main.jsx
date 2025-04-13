@@ -9,6 +9,7 @@ import Home from "./components/Home/Home.jsx";
 import ListedBooks from "./components/listedBooks/listedBooks.jsx";
 import Dashboard from "./components/Dashboard/Dashboard.jsx";
 import BookDetail from "./components/BookDetail/BookDetail.jsx";
+import Map from "./components/Map/map.jsx";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
         path: "/dashboard",
         element: <Dashboard></Dashboard>,
       },
+      {
+        path: '/map',
+        element: <Map></Map>
+      }
     ],
   },
 ]);
