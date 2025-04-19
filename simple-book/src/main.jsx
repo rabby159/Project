@@ -1,7 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./components/Root/Root.jsx";
 import ErrorPage from "./components/ErrorPage/ErrorPage.jsx";
@@ -10,6 +9,8 @@ import ListedBooks from "./components/listedBooks/listedBooks.jsx";
 import Dashboard from "./components/Dashboard/Dashboard.jsx";
 import BookDetail from "./components/BookDetail/BookDetail.jsx";
 import Map from "./components/Map/map.jsx";
+import SignUp from "./components/signup/SignUp.jsx";
+import SignIn from "./components/SignIn/SignIn.jsx";
 
 const router = createBrowserRouter([
   {
@@ -35,9 +36,17 @@ const router = createBrowserRouter([
         element: <Dashboard></Dashboard>,
       },
       {
-        path: '/map',
-        element: <Map></Map>
-      }
+        path: "/map",
+        element: <Map></Map>,
+      },
+      {
+        path: "/signUp",
+        element: <SignUp></SignUp>,
+      },
+      {
+        path: "/signIn",
+        element: <SignIn></SignIn>,
+      },
     ],
   },
 ]);
