@@ -22,7 +22,12 @@ const SignUp = () => {
                   <a className="link link-hover">Forgot password?</a>
                 </div>
                 <button className="btn btn-neutral">SignUp with Google</button>
-                <button className="btn btn-info text-white mt-4">Sign Up</button>
+                <button className="btn btn-info text-white mt-4">
+                  Sign Up
+                </button>
+                <p className="text-center">
+                  Already have an account? <a href="/signIn">SignIn</a>
+                </p>
               </fieldset>
             </div>
           </div>

@@ -42,6 +42,9 @@ const SignIn = () => {
                 <button className="btn btn-info text-white mt-4">
                   Sign In
                 </button>
+                <p className="text-center">
+                  Don't have an account? <a href="/signUp">SignUp</a>
+                </p>
               </fieldset>
             </div>
           </div>
