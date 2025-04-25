@@ -1,4 +1,6 @@
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import React from "react";
+import auth from "../firebase/firebase.init";
 
 const SignUp = () => {
   const handleSignUp = (event) => {
@@ -6,7 +8,14 @@ const SignUp = () => {
     const email = event.target.email.value;
     const password = event.target.password.value;
     const name = event.target.name.value;
-    console.log(name, email, password);
+
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((err) => {
+        console.log("404 Error!", err);
+      });
   };
 
   return (
