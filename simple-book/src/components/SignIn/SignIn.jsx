@@ -2,9 +2,12 @@ import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import React, { useContext } from "react";
 import auth from "../firebase/firebase.init";
 import { AuthContext } from "../Provider/AuthProvider";
+import { useNavigate } from "react-router-dom";
 
 const SignIn = () => {
   const provider = new GoogleAuthProvider();
+
+  const navigate = useNavigate();
 
   const { signInUser } = useContext(AuthContext);
 
@@ -27,6 +30,8 @@ const SignIn = () => {
     signInUser(email, password)
       .then((result) => {
         console.log(result.user);
+        event.target.reset();
+        navigate("/");
       })
       .catch((error) => {
         console.log("error", error.message);
