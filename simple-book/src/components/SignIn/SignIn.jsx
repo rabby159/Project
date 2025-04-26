@@ -1,9 +1,12 @@
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import React from "react";
+import React, { useContext } from "react";
 import auth from "../firebase/firebase.init";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const SignIn = () => {
   const provider = new GoogleAuthProvider();
+
+  const { signInUser } = useContext(AuthContext);
 
   const handleWithGoogleInfo = () => {
     signInWithPopup(auth, provider)
@@ -15,19 +18,40 @@ const SignIn = () => {
       });
   };
 
+  const handleSignIn = (event) => {
+    event.preventDefault();
+
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+
+    signInUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.log("error", error.message);
+      });
+  };
+
   return (
     <div>
-      <form>
+      <form onSubmit={handleSignIn}>
         <div className="my-20 ">
           <div className="hero-content">
             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
               <div className="card-body">
                 <fieldset className="fieldset">
                   <label className="fieldset-label">Email</label>
-                  <input type="email" className="input" placeholder="Email" />
+                  <input
+                    type="email"
+                    name="email"
+                    className="input"
+                    placeholder="Email"
+                  />
                   <label className="fieldset-label">Password</label>
                   <input
                     type="password"
+                    name="password"
                     className="input"
                     placeholder="Password"
                   />
