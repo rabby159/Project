@@ -11,6 +11,7 @@ import BookDetail from "./components/BookDetail/BookDetail.jsx";
 import Map from "./components/Map/map.jsx";
 import SignUp from "./components/signup/SignUp.jsx";
 import SignIn from "./components/SignIn/SignIn.jsx";
+import AuthProvider from "./components/Provider/AuthProvider.jsx";
 
 const router = createBrowserRouter([
   {
@@ -53,6 +54,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </StrictMode>
 );
