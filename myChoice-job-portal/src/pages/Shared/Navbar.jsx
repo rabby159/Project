@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../../assets/logos/new-logo.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const NavLinks = (
@@ -17,13 +18,17 @@ const Navbar = () => {
   );
   const Buttons = (
     <div className="space-x-2">
-      <button className="btn btn-soft btn-info">Sign In</button>
-      <button className="btn btn-info text-white">Register</button>
+      <Link to="/signIn" className="btn btn-soft btn-info">
+        Sign In
+      </Link>
+      <Link to="/register" className="btn btn-info text-white">
+        Register
+      </Link>
     </div>
   );
   return (
     <div>
-      <div className="navbar">
+      <div className="navbar max-w-7xl mx-auto">
         <div>
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
