@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import logo from "../../assets/logos/new-logo.png";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import AuthContext from "../../context/AuthContext/AuthContext";
 
 const Navbar = () => {
@@ -17,17 +17,12 @@ const Navbar = () => {
   };
 
   const NavLinks = (
-    <>
-      <li>
-        <a>Item 1</a>
-      </li>
-      <li>
-        <a>Parent</a>
-      </li>
-      <li>
-        <a>Item 3</a>
-      </li>
-    </>
+    <div className="text-xl space-x-5 mr-5">
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/employer">Employer</NavLink>
+      <NavLink to="/candidate">Candidate</NavLink>
+      <NavLink to="/contact">Contact</NavLink>
+    </div>
   );
   const Buttons = (
     <div className="space-x-2">
