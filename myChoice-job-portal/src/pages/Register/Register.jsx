@@ -3,6 +3,8 @@ import React, { useContext } from "react";
 import registerAnimation from "../../assets/register-lottie/register-lottie.json";
 import BannerRegister from "./BannerRegister";
 import AuthContext from "../../context/AuthContext/AuthContext";
+import { FaFacebook, FaGithub,FaGoogle } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
@@ -59,8 +61,16 @@ const Register = () => {
                   placeholder="Password"
                   name="password"
                 />
-                <div>
-                  <a className="link link-hover">Forgot password?</a>
+                <div className="flex items-center justify-center text-2xl gap-5 mt-2">
+                  <Link>
+                    <FaGithub></FaGithub>
+                  </Link>
+                  <Link className="text-blue-500">
+                    <FaFacebook></FaFacebook>
+                  </Link>
+                  <Link className="text-rose-500">
+                    <FaGoogle></FaGoogle>
+                  </Link>
                 </div>
                 <button className="btn btn-info mt-4 text-white">
                   Register
