@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import logo from "../../assets/logos/new-logo.png";
 import { Link } from "react-router-dom";
+import AuthContext from "../../context/AuthContext/AuthContext";
 
 const Navbar = () => {
+  const { user, signOutUser } = useContext(AuthContext);
+
+  const handleSignOut = () => {
+    signOutUser()
+      .then((result) => {
+        console.log("SignOut");
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
+
   const NavLinks = (
     <>
       <li>
@@ -27,6 +40,7 @@ const Navbar = () => {
       </Link>
     </div>
   );
+
   return (
     <div>
       <div className="navbar max-w-7xl mx-auto">
@@ -54,7 +68,18 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
               {NavLinks}
-              {Buttons}
+              {user ? (
+                <>
+                  <button
+                    onClick={handleSignOut}
+                    className="btn btn-soft btn-info"
+                  >
+                    Sign Out
+                  </button>
+                </>
+              ) : (
+                <>{Buttons}</>
+              )}
             </ul>
           </div>
         </div>
@@ -68,7 +93,20 @@ const Navbar = () => {
           <div className=" hidden lg:flex">
             <ul className="menu menu-horizontal px-1">{NavLinks}</ul>
           </div>
-          <div className="hidden md:flex">{Buttons}</div>
+          <div className="hidden md:flex">
+            {user ? (
+              <>
+                <button
+                  onClick={handleSignOut}
+                  className="btn btn-soft btn-info"
+                >
+                  Sign Out
+                </button>
+              </>
+            ) : (
+              <>{Buttons}</>
+            )}
+          </div>
         </div>
       </div>
     </div>
