@@ -1,16 +1,30 @@
 import Lottie from "lottie-react";
-import React from "react";
+import React, { useContext } from "react";
 import registerAnimation from "../../assets/register-lottie/register-lottie.json";
 import BannerRegister from "./BannerRegister";
+import AuthContext from "../../context/AuthContext/AuthContext";
 
 const Register = () => {
+  const { createUser } = useContext(AuthContext);
+
   const handleRegister = (e) => {
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(name, email, password);
+    // console.log(name, email, password);
+
+    const passwordRegex =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{6,}$/;
+
+    createUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
   };
 
   return (
@@ -18,7 +32,7 @@ const Register = () => {
       <BannerRegister></BannerRegister>
       <div className="hero my-20 max-w-7xl mx-auto">
         <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="text-center lg:text-left w-96">
+          <div className="text-center lg:text-left md:w-96">
             <Lottie animationData={registerAnimation}></Lottie>
           </div>
           <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-xl">
