@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="bg-blue-200">
-      <footer className="footer sm:footer-horizontal max-w-7xl mx-auto text-base-content p-10 border-b-1 border-b-blue-100 mb-4">
+      <footer className="footer sm:footer-horizontal max-w-7xl mx-auto text-base-content p-10 border-b-1 border- mb-4">
         <aside>
           <img src={logo} alt="logo" />
           <p className="italic">
@@ -108,7 +108,7 @@ const Footer = () => {
         </nav>
       </footer>
       <div className="flex justify-center pb-5">
-        <p>Copyright © 2025 All Rights Reserved.</p>
+        <p>Copyright © 2025 All Rights Reserved. Okay!</p>
       </div>
     </div>
   );
