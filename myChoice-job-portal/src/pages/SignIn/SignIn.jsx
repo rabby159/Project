@@ -1,14 +1,13 @@
 import React, { useContext } from "react";
 import Lottie from "lottie-react";
 import loginAnimation from "../../assets/login-lottie/login-lottie.json";
-import { FaFacebook, FaGithub, FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import BannerSignIn from "./BannerSignIn";
 import AuthContext from "../../context/AuthContext/AuthContext";
 import NavbarForAuth from "../Shared/NavbarForAuth";
+import SocialLogin from "../Shared/SocialLogin";
 
 const SignIn = () => {
-
   const { signInUser } = useContext(AuthContext);
 
   const handleSignIn = (e) => {
@@ -19,12 +18,12 @@ const SignIn = () => {
     // console.log(email, password);
 
     signInUser(email, password)
-      .then(result => {
-      console.log(result.user);
+      .then((result) => {
+        console.log(result.user);
       })
-      .catch(error => {
-      console.log(error.message);
-    })
+      .catch((error) => {
+        console.log(error.message);
+      });
   };
 
   return (
@@ -56,22 +55,13 @@ const SignIn = () => {
                 <div>
                   <a className="link link-hover">Forgot password?</a>
                 </div>
-                <div className="flex items-center justify-center text-2xl gap-5">
-                  <Link>
-                    <FaGithub></FaGithub>
-                  </Link>
-                  <Link className="text-blue-500">
-                    <FaFacebook></FaFacebook>
-                  </Link>
-                  <Link className="text-rose-500">
-                    <FaGoogle></FaGoogle>
-                  </Link>
-                </div>
                 <button className="btn btn-info mt-4 text-white">
                   Sign In
                 </button>
               </fieldset>
             </form>
+            <div className="divider">OR</div>
+            <SocialLogin></SocialLogin>
           </div>
         </div>
       </div>

@@ -3,9 +3,8 @@ import React, { useContext } from "react";
 import registerAnimation from "../../assets/register-lottie/register-lottie.json";
 import BannerRegister from "./BannerRegister";
 import AuthContext from "../../context/AuthContext/AuthContext";
-import { FaFacebook, FaGithub,FaGoogle } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import NavbarForAuth from "../Shared/NavbarForAuth";
+import SocialLogin from "../Shared/SocialLogin";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
@@ -63,22 +62,14 @@ const Register = () => {
                   placeholder="Password"
                   name="password"
                 />
-                <div className="flex items-center justify-center text-2xl gap-5 mt-2">
-                  <Link>
-                    <FaGithub></FaGithub>
-                  </Link>
-                  <Link className="text-blue-500">
-                    <FaFacebook></FaFacebook>
-                  </Link>
-                  <Link className="text-rose-500">
-                    <FaGoogle></FaGoogle>
-                  </Link>
-                </div>
+
                 <button className="btn btn-info mt-4 text-white">
                   Register
                 </button>
               </fieldset>
             </form>
+            <div className="divider">OR</div>
+            <SocialLogin></SocialLogin>
           </div>
         </div>
       </div>
