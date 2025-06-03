@@ -3,7 +3,7 @@ import React from "react";
 const Banner = () => {
   return (
     <div
-      className="mb-20 bg-top p-80"
+      className="mb-20 p-80"
       style={{
         backgroundImage:
           "url(https://i.postimg.cc/Jh0jdRMw/blonde-young-businesswoman-sitting-workplace-looking-digital-tablet-office.jpg)",
@@ -27,7 +27,7 @@ const Banner = () => {
             <span className="text-blue-400 mr-1"> IOS Developer </span>
             <span className="text-blue-400 mr-1"> Android Developer </span>
           </p>
-          <div className="join bg-base-200 p-2 rounded-3xl">
+          <div className="join bg-blue-50 p-2 rounded-3xl">
             <div className="w-60 flex items-center border-r-1 border-r-blue-200 ml-4 mr-1">
               <label>
                 <input
