@@ -1,4 +1,5 @@
 import React from "react";
+import CountUp from "react-countup";
 
 const Banner = () => {
   return (
@@ -16,7 +17,7 @@ const Banner = () => {
           <h1 className="mb-5 text-6xl font-bold text-white">
             Search Between More <br /> Then{" "}
             <span className="text-blue-400 bg-blue-100 py-1 px-2 rounded-2xl text-5xl">
-              50,000
+              <CountUp duration={7} end={50000} />
             </span>{" "}
             Open Jobs.
           </h1>
