@@ -20,7 +20,7 @@ const Banner = () => {
             </span>{" "}
             Open Jobs.
           </h1>
-          <p className="mb-5 text-xl text-white">
+          <p className="mb-5 text-xl text-white my-8">
             Trending Jobs Keywords:
             <span className="text-blue-400 mr-1"> Web Designer </span>
             <span className="text-blue-400 mr-1"> Web Developer </span>
