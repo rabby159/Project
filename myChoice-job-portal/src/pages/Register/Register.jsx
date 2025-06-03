@@ -5,6 +5,7 @@ import BannerRegister from "./BannerRegister";
 import AuthContext from "../../context/AuthContext/AuthContext";
 import { FaFacebook, FaGithub,FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import NavbarForAuth from "../Shared/NavbarForAuth";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
@@ -31,6 +32,7 @@ const Register = () => {
 
   return (
     <div>
+      <NavbarForAuth></NavbarForAuth>
       <BannerRegister></BannerRegister>
       <div className="hero my-20 max-w-7xl mx-auto">
         <div className="hero-content flex-col lg:flex-row-reverse">

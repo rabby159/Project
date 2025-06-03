@@ -5,6 +5,7 @@ import { FaFacebook, FaGithub, FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import BannerSignIn from "./BannerSignIn";
 import AuthContext from "../../context/AuthContext/AuthContext";
+import NavbarForAuth from "../Shared/NavbarForAuth";
 
 const SignIn = () => {
 
@@ -28,6 +29,7 @@ const SignIn = () => {
 
   return (
     <div>
+      <NavbarForAuth></NavbarForAuth>
       <BannerSignIn></BannerSignIn>
       <div className="hero my-20 max-w-7xl mx-auto">
         <div className="hero-content flex-col lg:flex-row-reverse">

@@ -3,7 +3,7 @@ import React from "react";
 const BannerRegister = () => {
   return (
     <div
-      className="hero"
+      className="hero mt-20"
       style={{
         backgroundImage:
           "url(https://i.postimg.cc/y6Zymht4/12876470-9-Z-2102-w020-n001-1048-A-p30-1048.jpg)",

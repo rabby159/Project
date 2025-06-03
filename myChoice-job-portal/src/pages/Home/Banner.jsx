@@ -3,13 +3,14 @@ import React from "react";
 const Banner = () => {
   return (
     <div
-      className="hero mb-20 bg-top p-60"
+      className="hero mb-20 bg-top p-80"
       style={{
         backgroundImage:
-          "url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp)",
+          "url(https://i.postimg.cc/Jh0jdRMw/blonde-young-businesswoman-sitting-workplace-looking-digital-tablet-office.jpg)",
+        backgroundSize: "cover",
       }}
     >
-      <div className="hero-overlay"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"></div>
       <div className="hero-content text-neutral-content text-center">
         <div className="max-w-md">
           <h1 className="mb-5 text-5xl font-bold">Hello there</h1>

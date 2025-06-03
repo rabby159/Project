@@ -3,7 +3,7 @@ import React from "react";
 const BannerSignIn = () => {
   return (
     <div
-      className="hero"
+      className="hero mt-20"
       style={{
         backgroundImage:
           "url(https://i.postimg.cc/rwW0ctnZ/laptop-with-glowing-screen-table-dark-top-view-copy-space.jpg)",
