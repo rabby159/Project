@@ -17,12 +17,20 @@ const Navbar = () => {
   };
 
   const NavLinks = (
-    <div className="text-xl space-x-5 mr-5">
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/employer">Employer</NavLink>
-      <NavLink to="/candidate">Candidate</NavLink>
-      <NavLink to="/contact">Contact</NavLink>
-    </div>
+    <>
+      <li>
+        <NavLink to="/">Home</NavLink>
+      </li>
+      <li>
+        <NavLink to="/employer">Employer</NavLink>
+      </li>
+      <li>
+        <NavLink to="/candidate">Candidate</NavLink>
+      </li>
+      <li>
+        <NavLink to="/contact">Contact</NavLink>
+      </li>
+    </>
   );
   const Buttons = (
     <div className="space-x-2">
@@ -38,7 +46,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="navbar max-w-7xl mx-auto">
+      <div className="navbar absolute top-0 left-1/2  w-full max-w-7xl z-50 bg-transparent">
         <div>
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -86,7 +94,7 @@ const Navbar = () => {
         </div>
         <div className="md:navbar-end">
           <div className=" hidden lg:flex">
-            <ul className="menu menu-horizontal px-1">{NavLinks}</ul>
+            <ul className="menu menu-horizontal px-1 text-xl">{NavLinks}</ul>
           </div>
           <div className="hidden md:flex">
             {user ? (
