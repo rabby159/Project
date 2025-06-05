@@ -31,4 +31,6 @@ const SocialLogin = () => {
   );
 };
 
+//only for testing purpose
+
 export default SocialLogin;
