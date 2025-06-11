@@ -7,9 +7,6 @@ const { MongoClient, ServerApiVersion } = require("mongodb");
 app.use(cors());
 app.use(express.json());
 
-//DB USER = job_hunter
-//DB Pass= D6Syi5ZK1xMq65AR
-
 const uri =
   "mongodb+srv://<db_username>:<db_password>@cluster0.dhl2xpe.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
