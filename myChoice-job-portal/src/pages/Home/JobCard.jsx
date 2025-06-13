@@ -18,7 +18,7 @@ const JobCard = ({ job }) => {
 
   return (
     <div>
-      <div className="card bg-base-100 shadow-sm px-5 py-5  h-[435px]">
+      <div className="card bg-indigo-100 shadow-sm px-5 py-5  h-[435px]">
         <div className="flex items-center gap-3">
           <figure className="flex-1/3">
             <img src={company_logo} alt="Shoes" className="rounded-xl w-16 " />
@@ -50,18 +50,20 @@ const JobCard = ({ job }) => {
           <p>{description}</p>
         </div>
         <div className="pb-5">
-          <p className="flex items-center flex-wrap gap-1">
+          <p className="flex items-center flex-wrap gap-1 ">
             {requirements.map((skill) => (
-              <p className="border p-1 text-xs rounded-xl">{skill}</p>
+              <p className="border p-1 text-xs rounded-xl bg-blue-100 hover:text-blue-600">
+                {skill}
+              </p>
             ))}
           </p>
         </div>
         <div className="flex justify-between items-center mt-auto">
-          <h2 className="flex gap-1 items-center">
+          <h2 className="flex items-center text-sm font-bold">
             <PiCurrencyDollarSimpleBold />
-            {salaryRange.min} - {salaryRange.max}
+            {salaryRange.min} - {salaryRange.max} / {salaryRange.currency}
           </h2>
-          <button className="btn btn-info text-white">Buy Now</button>
+          <button className="btn btn-info text-white text-sm">Apply Now</button>
         </div>
       </div>
     </div>
