@@ -1,27 +1,45 @@
 import React from "react";
+import { CiLocationOn, CiCalendarDate } from "react-icons/ci";
+import { LuBriefcaseBusiness } from "react-icons/lu";
 
-const JobCard = () => {
+const JobCard = ({ job }) => {
+  const {
+    title,
+    company,
+    company_logo,
+    location,
+    jobType,
+    applicationDeadline,
+  } = job;
+
   return (
     <div>
-      <div className="card bg-base-100 shadow-sm px-5 py-5">
-        <div className="flex items-center gap-6">
-          <figure className="flex-1">
-            <img
-              src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-              alt="Shoes"
-              className="rounded-xl"
-            />
+      <div className="card bg-base-100 shadow-sm px-5 py-5 h-[400px]">
+        <div className="flex items-center gap-3">
+          <figure className="flex-1/3">
+            <img src={company_logo} alt="Shoes" className="rounded-xl w-16 " />
           </figure>
-          <div className="flex-auto">
-            <h3>title</h3>
-            <p>location</p>
+          <div className="flex-2/3">
+            <h3 className="font-semibold text-xl">{company}</h3>
+            <p className="flex items-center gap-1">
+              {" "}
+              <CiLocationOn />
+              {location}
+            </p>
           </div>
         </div>
         <div className="py-5">
-          <h2 className="card-title">Position Name</h2>
+          <h2 className="card-title">{title}</h2>
           <div className="flex items-center gap-5">
-            <p>Shift</p>
-            <p>Time</p>
+            <p className="flex items-center gap-1">
+              <LuBriefcaseBusiness />
+              {jobType}
+            </p>
+            <p className="flex items-center gap-1">
+              {" "}
+              <CiCalendarDate />
+              {applicationDeadline}
+            </p>
           </div>
         </div>
         <div className="pb-5">
@@ -34,8 +52,8 @@ const JobCard = () => {
           <p>technologies</p>
         </div>
         <div className="flex justify-between items-center">
-                  <h2>Amount</h2>
-                  <button className="btn btn-primary">Buy Now</button>
+          <h2>Amount</h2>
+          <button className="btn btn-primary">Buy Now</button>
         </div>
       </div>
     </div>
