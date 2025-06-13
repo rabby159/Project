@@ -30,9 +30,14 @@ async function run() {
     );
 
     //Jobs related API
-    const jobsCollection = client.db("myChoiceJobPortal").collection("jobs")
+    const jobsCollection = client.db("myChoiceJobPortal").collection("jobs");
+    app.get("/jobs", async (req, res) => {
+      const cursor = jobsCollection.find();
+      const result = await cursor.toArray();
+      res.send(result);
+    })
     
-    
+
       
   } finally {
     // Ensures that the client will close when you finish/error
