@@ -1,6 +1,7 @@
 import React from "react";
 import { CiLocationOn, CiCalendarDate } from "react-icons/ci";
 import { LuBriefcaseBusiness } from "react-icons/lu";
+import { PiCurrencyDollarSimpleBold } from "react-icons/pi";
 
 const JobCard = ({ job }) => {
   const {
@@ -12,6 +13,7 @@ const JobCard = ({ job }) => {
     applicationDeadline,
     description,
     requirements,
+    salaryRange,
   } = job;
 
   return (
@@ -55,8 +57,11 @@ const JobCard = ({ job }) => {
           </p>
         </div>
         <div className="flex justify-between items-center mt-auto">
-          <h2>Amount</h2>
-          <button className="btn btn-primary">Buy Now</button>
+          <h2 className="flex gap-1 items-center">
+            <PiCurrencyDollarSimpleBold />
+            {salaryRange.min} - {salaryRange.max}
+          </h2>
+          <button className="btn btn-info text-white">Buy Now</button>
         </div>
       </div>
     </div>
