@@ -10,11 +10,13 @@ const JobCard = ({ job }) => {
     location,
     jobType,
     applicationDeadline,
+    description,
+    requirements,
   } = job;
 
   return (
     <div>
-      <div className="card bg-base-100 shadow-sm px-5 py-5 h-[400px]">
+      <div className="card bg-base-100 shadow-sm px-5 py-5  h-[435px]">
         <div className="flex items-center gap-3">
           <figure className="flex-1/3">
             <img src={company_logo} alt="Shoes" className="rounded-xl w-16 " />
@@ -43,15 +45,16 @@ const JobCard = ({ job }) => {
           </div>
         </div>
         <div className="pb-5">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
-            ipsam!
-          </p>
+          <p>{description}</p>
         </div>
         <div className="pb-5">
-          <p>technologies</p>
+          <p className="flex items-center flex-wrap gap-1">
+            {requirements.map((skill) => (
+              <p className="border p-1 text-xs rounded-xl">{skill}</p>
+            ))}
+          </p>
         </div>
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center mt-auto">
           <h2>Amount</h2>
           <button className="btn btn-primary">Buy Now</button>
         </div>
