@@ -2,9 +2,11 @@ import React from "react";
 import { CiLocationOn, CiCalendarDate } from "react-icons/ci";
 import { LuBriefcaseBusiness } from "react-icons/lu";
 import { PiCurrencyDollarSimpleBold } from "react-icons/pi";
+import { Link } from "react-router-dom";
 
 const JobCard = ({ job }) => {
   const {
+    _id,
     title,
     company,
     company_logo,
@@ -63,7 +65,9 @@ const JobCard = ({ job }) => {
             <PiCurrencyDollarSimpleBold />
             {salaryRange.min} - {salaryRange.max} / {salaryRange.currency}
           </h2>
-          <button className="btn btn-info text-white text-sm">Apply</button>
+          <Link to={`/jobs/${_id}`}>
+            <button className="btn btn-info text-white text-sm">Apply</button>
+          </Link>
         </div>
       </div>
     </div>
