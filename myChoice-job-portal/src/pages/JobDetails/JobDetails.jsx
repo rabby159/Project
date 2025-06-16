@@ -1,11 +1,15 @@
-import React from 'react';
+import React from "react";
+import NavbarForAuth from "../Shared/NavbarForAuth";
 
 const JobDetails = () => {
-    return (
-        <div>
-            <h1>Job Details</h1>
-        </div>
-    );
+  return (
+    <div>
+      <NavbarForAuth></NavbarForAuth>
+      <div className="my-20 max-w-7xl mx-auto">
+        <h1>Job Details</h1>
+      </div>
+    </div>
+  );
 };
 
 export default JobDetails;

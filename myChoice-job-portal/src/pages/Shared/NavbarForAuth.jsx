@@ -46,7 +46,7 @@ const NavbarForAuth = () => {
 
   return (
     <div>
-      <div className="navbar absolute top-0 left-1/2 transform -translate-x-1/2 w-full max-w-7xl z-50 bg-transparent">
+      <div className="navbar absolute top-0 left-1/2 transform -translate-x-1/2 w-full max-w-7xl z-50 bg-transparent ">
         <div>
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
