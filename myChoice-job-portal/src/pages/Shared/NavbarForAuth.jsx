@@ -45,8 +45,8 @@ const NavbarForAuth = () => {
   );
 
   return (
-    <div>
-      <div className="navbar absolute top-0 left-1/2 transform -translate-x-1/2 w-full max-w-7xl z-50 bg-transparent ">
+    <div className="w-full z-50 bg-blue-50 ">
+      <div className="navbar max-w-7xl mx-auto">
         <div>
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -94,9 +94,7 @@ const NavbarForAuth = () => {
         </div>
         <div className="md:navbar-end">
           <div className=" hidden lg:flex">
-            <ul className="menu menu-horizontal px-1 text-xl">
-              {NavLinks}
-            </ul>
+            <ul className="menu menu-horizontal px-1 text-xl">{NavLinks}</ul>
           </div>
           <div className="hidden md:flex">
             {user ? (
