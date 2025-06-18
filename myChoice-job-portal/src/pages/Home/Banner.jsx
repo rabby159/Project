@@ -11,7 +11,7 @@ const Banner = () => {
         backgroundSize: "cover",
       }}
     >
-      <div class="absolute inset-0 bg-gradient-to-r from-black/100 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-black/100 to-transparent"></div>
       <div className="text-left  isolation: isolate">
         <div>
           <h1 className="mb-5 text-6xl font-bold text-white">

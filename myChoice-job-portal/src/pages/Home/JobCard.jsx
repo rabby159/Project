@@ -1,3 +1,4 @@
+import { key } from "localforage";
 import React from "react";
 import { CiLocationOn, CiCalendarDate } from "react-icons/ci";
 import { LuBriefcaseBusiness } from "react-icons/lu";
@@ -52,13 +53,13 @@ const JobCard = ({ job }) => {
           <p>{description}</p>
         </div>
         <div className="pb-5">
-          <p className="flex items-center flex-wrap gap-1 ">
-            {requirements.map((skill) => (
-              <p className="border p-1 text-xs rounded-md bg-blue-100 hover:text-blue-600">
+          <div className="flex items-center flex-wrap gap-1 ">
+            {requirements.map((skill, index) => (
+              <p key={index} className="border p-1 text-xs rounded-md bg-blue-100 hover:text-blue-600">
                 {skill}
               </p>
             ))}
-          </p>
+          </div>
         </div>
         <div className="flex justify-between items-center mt-auto">
           <h2 className="flex items-center text-md font-bold">
