@@ -1,7 +1,7 @@
 import React from "react";
 import NavbarForAuth from "../Shared/NavbarForAuth";
 import { useLoaderData } from "react-router-dom";
-import { CiMoneyCheck1 } from "react-icons/ci";
+import { CiMoneyCheck1, CiCalendarDate } from "react-icons/ci";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
 import { LuBriefcaseBusiness } from "react-icons/lu";
 
@@ -16,7 +16,8 @@ const JobDetails = () => {
     requirements,
     responsibilities,
     status,
-    jobType
+    jobType,
+    applicationDeadline,
   } = useLoaderData();
 
   return (
@@ -25,10 +26,10 @@ const JobDetails = () => {
       <div className="my-20 max-w-7xl mx-auto">
         <div className="flex gap-5">
           {/* Job details left side layOut*/}
-          <div className="flex-3 p-5">
+          <div className="flex-3">
             {/* Job details tittle*/}
-            <div className="hero border-1 rounded-2xl border-blue-100">
-              <div className="hero-content flex-col lg:flex-row flex gap-5">
+            <div className="border-1 rounded-2xl border-blue-100 p-5 shadow">
+              <div className=" flex-col lg:flex-row flex items-center gap-5">
                 <div className="flex-2 flex justify-center border-r-1 border-blue-100">
                   <div>
                     <div className="flex justify-center">
@@ -37,7 +38,7 @@ const JobDetails = () => {
                         className="max-w-sm rounded-lg shadow-2xl w-20"
                       />
                     </div>
-                    <p className="flex justify-center mt-3">{title}</p>
+                    <p className="flex justify-center mt-3 font-semibold">{title}</p>
                     <p className="flex justify-center mt-1 mb-4">{location}</p>
                     <div className="flex justify-center">
                       <button className="btn btn-info text-white">
@@ -57,6 +58,11 @@ const JobDetails = () => {
                   <p className="flex items-center gap-2">
                     <LuBriefcaseBusiness />
                     {jobType}
+                  </p>
+                  <p className="flex items-center gap-2 ">
+                    <CiCalendarDate />
+                    Deadline:{" "}
+                    <span className="text-red-400">{applicationDeadline}</span>
                   </p>
                 </div>
               </div>
