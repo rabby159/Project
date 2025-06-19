@@ -123,7 +123,6 @@ const JobDetails = () => {
                   <AnyReactComponent
                     lat={22.70292}
                     lng={90.3466}
-                    text="My Marker"
                   ></AnyReactComponent>
                 </GoogleMapReact>
               </div>
