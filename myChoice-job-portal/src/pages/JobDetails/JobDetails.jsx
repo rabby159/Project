@@ -38,7 +38,9 @@ const JobDetails = () => {
                         className="max-w-sm rounded-lg shadow-2xl w-20"
                       />
                     </div>
-                    <p className="flex justify-center mt-3 font-semibold">{title}</p>
+                    <p className="flex justify-center mt-3 font-semibold">
+                      {title}
+                    </p>
                     <p className="flex justify-center mt-1 mb-4">{location}</p>
                     <div className="flex justify-center">
                       <button className="btn btn-info text-white">
@@ -65,6 +67,16 @@ const JobDetails = () => {
                     <span className="text-red-400">{applicationDeadline}</span>
                   </p>
                 </div>
+              </div>
+            </div>
+
+            {/* Job details description*/}
+            <div className="mt-10">
+              <div className="bg-gray-800 text-white text-2xl font-bold p-5 rounded-t-xl">
+                <h1>Job Description</h1>
+              </div>
+              <div className="flex justify-center p-5 border border-blue-100">
+                <p>{description}</p>
               </div>
             </div>
           </div>
