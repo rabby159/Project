@@ -6,6 +6,7 @@ import { MdOutlineMarkEmailRead } from "react-icons/md";
 import { LuBriefcaseBusiness } from "react-icons/lu";
 import GoogleMapReact from "google-map-react";
 import { LiaGiftsSolid } from "react-icons/lia";
+import { BsPersonBadge } from "react-icons/bs";
 
 const JobDetails = () => {
   const {
@@ -149,12 +150,40 @@ const JobDetails = () => {
                 Facilities
               </div>
               <div className="mt-5">
-                <ul>
+                <ul className="space-y-2">
                   <li>- 2 festival bonuses per year.</li>
                   <li>- Team tours and remote meals.</li>
                   <li>- Salary review once a year.</li>
                   <li>- Probation period of 3 months.</li>
-                  <li>- After the three-month probation period, you will be given 2,000 BDT for internet and device bills or transport fees every month.</li>
+                  <li>
+                    - After the three-month probation period, you will be given
+                    2,000 BDT for internet and device bills or transport fees
+                    every month.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Job details interview section*/}
+            <div className="border border-blue-100 p-5 rounded-2xl shadow my-10">
+              <div className="flex gap-2 items-center text-2xl font-bold border-b-1 border-blue-100 pb-5">
+                <BsPersonBadge />
+                Interview Process
+              </div>
+              <div className="mt-5">
+                <ul className="space-y-6">
+                  <li>
+                    - Round one - Skill evaluation: We will mail skill
+                    assessment tasks for the candidates who applied in due time.
+                  </li>
+                  <li>
+                    - Round 2 - Team Interview: web team will hold an interview
+                    to evaluate the candidates' interpersonal skills.
+                  </li>
+                  <li>
+                    - Round 3 - CEO interview: Our final interview round will be
+                    conducted by our CEO.
+                  </li>
                 </ul>
               </div>
             </div>
