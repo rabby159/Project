@@ -100,7 +100,7 @@ const JobDetails = () => {
               </div>
               <div className="p-5 border border-blue-100">
                 {requirements.map((skill, index) => (
-                  <p key={index} className="">
+                  <p key={index}>
                     - {skill}
                   </p>
                 ))}
@@ -125,6 +125,20 @@ const JobDetails = () => {
                     lng={90.3466}
                   ></AnyReactComponent>
                 </GoogleMapReact>
+              </div>
+            </div>
+
+            {/* Job details requirement section*/}
+            <div className="mt-10">
+              <div className="bg-gray-800 text-white text-2xl font-bold p-5 rounded-t-xl">
+                <h1>Responsibilities</h1>
+              </div>
+              <div className="p-5 border border-blue-100">
+                {responsibilities.map((requirement, index) => (
+                  <p key={index}>
+                    - {requirement}
+                  </p>
+                ))}
               </div>
             </div>
           </div>
