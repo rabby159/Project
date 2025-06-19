@@ -4,6 +4,7 @@ import { useLoaderData } from "react-router-dom";
 import { CiMoneyCheck1, CiCalendarDate } from "react-icons/ci";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
 import { LuBriefcaseBusiness } from "react-icons/lu";
+import GoogleMapReact from "google-map-react";
 
 const JobDetails = () => {
   const {
@@ -19,6 +20,18 @@ const JobDetails = () => {
     jobType,
     applicationDeadline,
   } = useLoaderData();
+
+  const defaultProps = {
+    center: {
+      lat: 23.81033,
+      lng: 90.41252,
+    },
+    zoom: 11,
+  };
+
+  const AnyReactComponent = ({ text }) => (
+    <div style={{ color: "red", fontWeight: "bold" }}>{text}</div>
+  );
 
   return (
     <div>
@@ -91,6 +104,28 @@ const JobDetails = () => {
                     - {skill}
                   </p>
                 ))}
+              </div>
+            </div>
+
+            {/* Job details location section*/}
+            <div className="mt-10">
+              <div className="bg-gray-800 text-white text-2xl font-bold p-5 rounded-t-xl">
+                <h1>Location</h1>
+              </div>
+              <div className="p-5 border border-blue-100 h-[400px] w-full">
+                <GoogleMapReact
+                  bootstrapURLKeys={{
+                    key: "AIzaSyDtl6LM-SBpi4-95IysTdJ7zbhBJ2Z52lQ",
+                  }}
+                  defaultCenter={defaultProps.center}
+                  defaultZoom={defaultProps.zoom}
+                >
+                  <AnyReactComponent
+                    lat={22.70292}
+                    lng={90.3466}
+                    text="My Marker"
+                  ></AnyReactComponent>
+                </GoogleMapReact>
               </div>
             </div>
           </div>
