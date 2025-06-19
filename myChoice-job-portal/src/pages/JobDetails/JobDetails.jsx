@@ -1,12 +1,14 @@
 import React from "react";
 import NavbarForAuth from "../Shared/NavbarForAuth";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { CiMoneyCheck1, CiCalendarDate } from "react-icons/ci";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
 import { LuBriefcaseBusiness } from "react-icons/lu";
 import GoogleMapReact from "google-map-react";
 import { LiaGiftsSolid } from "react-icons/lia";
 import { BsPersonBadge } from "react-icons/bs";
+import adImg from "../../assets/ad/Screenshot_7.jpg";
+import { FaFacebook } from "react-icons/fa";
 
 const JobDetails = () => {
   const {
@@ -173,8 +175,8 @@ const JobDetails = () => {
               <div className="mt-5">
                 <ul className="space-y-6">
                   <li>
-                    - Round one - Skill evaluation: We will mail skill
-                    assessment tasks for the candidates who applied in due time.
+                    - Round 1 - Skill evaluation: We will mail skill assessment
+                    tasks for the candidates who applied in due time.
                   </li>
                   <li>
                     - Round 2 - Team Interview: web team will hold an interview
@@ -185,6 +187,22 @@ const JobDetails = () => {
                     conducted by our CEO.
                   </li>
                 </ul>
+              </div>
+            </div>
+
+            {/* Job details ad section*/}
+            <div className="border border-blue-100 p-5 my-10">
+              <div className="flex gap-2 items-center">ad</div>
+              <div className="mt-5">
+                <img src={adImg} alt="" />
+                <p className="flex items-center gap-5 mt-3">
+                  Click to connect:{" "}
+                  <span className="text-blue-500 text-3xl">
+                    <Link to="https://www.facebook.com/myongadget">
+                      <FaFacebook />
+                    </Link>
+                  </span>
+                </p>
               </div>
             </div>
           </div>
