@@ -115,7 +115,7 @@ const JobDetails = () => {
               <div className="p-5 border border-blue-100 h-[400px] w-full">
                 <GoogleMapReact
                   bootstrapURLKeys={{
-                    key: "AIzaSyDtl6LM-SBpi4-95IysTdJ7zbhBJ2Z52lQ",
+                    key: import.meta.env.VITE_mapAPI,
                   }}
                   defaultCenter={defaultProps.center}
                   defaultZoom={defaultProps.zoom}
