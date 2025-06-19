@@ -198,9 +198,9 @@ const JobDetails = () => {
                 <p className="flex items-center gap-5 mt-3">
                   Click to connect:{" "}
                   <span className="text-blue-500 text-3xl">
-                    <Link to="https://www.facebook.com/myongadget">
+                    <a href="https://www.facebook.com/myongadget">
                       <FaFacebook />
-                    </Link>
+                    </a>
                   </span>
                 </p>
               </div>
