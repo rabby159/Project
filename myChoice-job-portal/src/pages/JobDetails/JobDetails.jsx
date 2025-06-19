@@ -27,7 +27,7 @@ const JobDetails = () => {
         <div className="flex gap-5">
           {/* Job details left side layOut*/}
           <div className="flex-3">
-            {/* Job details tittle*/}
+            {/* Job details tittle section*/}
             <div className="border-1 rounded-2xl border-blue-100 p-5 shadow">
               <div className=" flex-col lg:flex-row flex items-center gap-5">
                 <div className="flex-2 flex justify-center border-r-1 border-blue-100">
@@ -70,13 +70,27 @@ const JobDetails = () => {
               </div>
             </div>
 
-            {/* Job details description*/}
+            {/* Job details description section*/}
             <div className="mt-10">
               <div className="bg-gray-800 text-white text-2xl font-bold p-5 rounded-t-xl">
                 <h1>Job Description</h1>
               </div>
               <div className="flex justify-center p-5 border border-blue-100">
                 <p>{description}</p>
+              </div>
+            </div>
+
+            {/* Job details Skill section*/}
+            <div className="mt-10">
+              <div className="bg-gray-800 text-white text-2xl font-bold p-5 rounded-t-xl">
+                <h1>Job Skill</h1>
+              </div>
+              <div className="p-5 border border-blue-100">
+                {requirements.map((skill, index) => (
+                  <p key={index} className="">
+                    - {skill}
+                  </p>
+                ))}
               </div>
             </div>
           </div>
