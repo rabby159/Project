@@ -5,6 +5,7 @@ import { CiMoneyCheck1, CiCalendarDate } from "react-icons/ci";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
 import { LuBriefcaseBusiness } from "react-icons/lu";
 import GoogleMapReact from "google-map-react";
+import { LiaGiftsSolid } from "react-icons/lia";
 
 const JobDetails = () => {
   const {
@@ -37,7 +38,7 @@ const JobDetails = () => {
     <div>
       <NavbarForAuth></NavbarForAuth>
       <div className="my-20 max-w-7xl mx-auto">
-        <div className="flex gap-5">
+        <div className="flex gap-10">
           {/* Job details left side layOut*/}
           <div className="flex-3">
             {/* Job details tittle section*/}
@@ -85,7 +86,7 @@ const JobDetails = () => {
 
             {/* Job details description section*/}
             <div className="mt-10">
-              <div className="bg-gray-800 text-white text-2xl font-bold p-5 rounded-t-xl">
+              <div className="bg-gray-800 text-base-300 text-2xl font-bold p-5 rounded-t-xl">
                 <h1>Job Description</h1>
               </div>
               <div className="flex justify-center p-5 border border-blue-100">
@@ -95,21 +96,19 @@ const JobDetails = () => {
 
             {/* Job details Skill section*/}
             <div className="mt-10">
-              <div className="bg-gray-800 text-white text-2xl font-bold p-5 rounded-t-xl">
+              <div className="bg-gray-800 text-base-300 text-2xl font-bold p-5 rounded-t-xl">
                 <h1>Job Skill</h1>
               </div>
               <div className="p-5 border border-blue-100">
                 {requirements.map((skill, index) => (
-                  <p key={index}>
-                    - {skill}
-                  </p>
+                  <p key={index}>- {skill}</p>
                 ))}
               </div>
             </div>
 
             {/* Job details location section*/}
             <div className="mt-10">
-              <div className="bg-gray-800 text-white text-2xl font-bold p-5 rounded-t-xl">
+              <div className="bg-gray-800 text-base-300 text-2xl font-bold p-5 rounded-t-xl">
                 <h1>Location</h1>
               </div>
               <div className="p-5 border border-blue-100 h-[400px] w-full">
@@ -130,21 +129,36 @@ const JobDetails = () => {
 
             {/* Job details requirement section*/}
             <div className="mt-10">
-              <div className="bg-gray-800 text-white text-2xl font-bold p-5 rounded-t-xl">
+              <div className="bg-gray-800 text-base-300 text-2xl font-bold p-5 rounded-t-xl">
                 <h1>Responsibilities</h1>
               </div>
               <div className="p-5 border border-blue-100">
                 {responsibilities.map((requirement, index) => (
-                  <p key={index}>
-                    - {requirement}
-                  </p>
+                  <p key={index}>- {requirement}</p>
                 ))}
               </div>
             </div>
           </div>
 
           {/* Job details right side layOut*/}
-          <div className="flex-2 border-2 border-amber-400 p-5"></div>
+          <div className="flex-2">
+            {/* Job details facilities section*/}
+            <div className="border border-blue-100 p-5 rounded-2xl shadow">
+              <div className="flex gap-2 items-center text-2xl font-bold border-b-1 border-blue-100 pb-5">
+                <LiaGiftsSolid />
+                Facilities
+              </div>
+              <div className="mt-5">
+                <ul>
+                  <li>- 2 festival bonuses per year.</li>
+                  <li>- Team tours and remote meals.</li>
+                  <li>- Salary review once a year.</li>
+                  <li>- Probation period of 3 months.</li>
+                  <li>- After the three-month probation period, you will be given 2,000 BDT for internet and device bills or transport fees every month.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
