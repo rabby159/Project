@@ -12,6 +12,7 @@ import { FaFacebook } from "react-icons/fa";
 
 const JobDetails = () => {
   const {
+    _id,
     company_logo,
     title,
     location,
@@ -60,9 +61,11 @@ const JobDetails = () => {
                     </p>
                     <p className="flex justify-center mt-1 mb-4">{location}</p>
                     <div className="flex justify-center">
-                      <button className="btn btn-info text-white">
-                        Apply Now
-                      </button>
+                      <Link to={`/jobApply/${_id}`}>
+                        <button className="btn btn-info text-white">
+                          Apply Now
+                        </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
