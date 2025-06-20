@@ -1,8 +1,11 @@
 import React from "react";
 import NavbarForAuth from "../Shared/NavbarForAuth";
 import { useParams } from "react-router-dom";
+import useAuth from '../../hooks/useAuth'
 
 const JobApply = () => {
+  const { user } = useAuth();
+  // console.log(user);
   const { id } = useParams();
   // console.log(id);
 
