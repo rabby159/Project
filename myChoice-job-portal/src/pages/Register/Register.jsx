@@ -5,9 +5,12 @@ import BannerRegister from "./BannerRegister";
 import AuthContext from "../../context/AuthContext/AuthContext";
 import NavbarForAuth from "../Shared/NavbarForAuth";
 import SocialLogin from "../Shared/SocialLogin";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const to = "/";
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -16,13 +19,13 @@ const Register = () => {
     const email = form.email.value;
     const password = form.password.value;
     // console.log(name, email, password);
-
     const passwordRegex =
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{6,}$/;
 
     createUser(email, password)
       .then((result) => {
         console.log(result.user);
+        navigate(to);
       })
       .catch((error) => {
         console.log(error.message);
