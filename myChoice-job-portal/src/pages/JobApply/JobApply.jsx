@@ -1,7 +1,18 @@
 import React from "react";
 import NavbarForAuth from "../Shared/NavbarForAuth";
+import { useParams } from "react-router-dom";
 
 const JobApply = () => {
+  const { id } = useParams();
+  // console.log(id);
+
+  const handleJobApplyForm = (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    const firstName = form.firstName.value;
+    console.log(firstName);
+  };
   return (
     <div>
       <NavbarForAuth></NavbarForAuth>
@@ -12,14 +23,14 @@ const JobApply = () => {
             Please Fill Out the Form Below to Submit Your Job Application!
           </p>
         </div>
-        <div className="flex gap-10 mb-20">
-          {/* Personal information section*/}
-          <div className="flex-1 mt-10">
-            <div className="bg-gray-800 text-base-300 text-center text-2xl font-bold p-5 rounded-t-xl">
-              <h1>Personal Information</h1>
-            </div>
-            <div className="p-5 border border-blue-100">
-              <form className="flex gap-10">
+        <form onSubmit={handleJobApplyForm}>
+          <div className="flex gap-10 mb-10">
+            {/* Personal information section*/}
+            <div className="flex-1 mt-10">
+              <div className="bg-gray-800 text-base-300 text-center text-2xl font-bold p-5 rounded-t-xl">
+                <h1>Personal Information</h1>
+              </div>
+              <div className="flex gap-10 p-5 border border-blue-100">
                 <div className="space-y-5">
                   {/* first name */}
                   <div className="">
@@ -28,7 +39,7 @@ const JobApply = () => {
                     </label>
                     <input
                       type="text"
-                      name="first-name"
+                      name="firstName"
                       placeholder="Type here.."
                       className="input input-info"
                     />
@@ -120,18 +131,16 @@ const JobApply = () => {
                     />
                   </div>
                 </div>
-              </form>
+              </div>
             </div>
-          </div>
 
-          {/* Professional information section*/}
-          <div className="flex-1 mt-10">
-            <div className="bg-gray-800 text-base-300 text-center text-2xl font-bold p-5 rounded-t-xl">
-              <h1>Professional Information</h1>
-            </div>
-            <div className="p-5 border border-blue-100">
-              <form className="space-y-10">
-                <div>
+            {/* Professional information section*/}
+            <div className="flex-1 mt-10">
+              <div className="bg-gray-800 text-base-300 text-center text-2xl font-bold p-5 rounded-t-xl">
+                <h1>Professional Information</h1>
+              </div>
+              <div className="p-5 border border-blue-100">
+                <div className="space-y-10">
                   <div className="">
                     <label className="label">
                       <span className="label-text font-semibold">
@@ -155,10 +164,37 @@ const JobApply = () => {
                     <input type="file" className="file-input file-input-lg" />
                   </div>
                 </div>
-              </form>
+                <div>
+                  <fieldset className="fieldset border-base-300 rounded-box w-64 border p-4">
+                    <legend className="fieldset-legend">Login options</legend>
+                    <div className="flex gap-3">
+                      <label className="label">
+                        <input type="checkbox" className="checkbox" />
+                        Walk-In
+                      </label>
+                      <label className="label">
+                        <input type="checkbox" className="checkbox" />X
+                      </label>
+                      <label className="label">
+                        <input type="checkbox" className="checkbox" />
+                        LinkedIn
+                      </label>
+                      <label className="label">
+                        <input type="checkbox" className="checkbox" />
+                        Facebook
+                      </label>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+          <div>
+            <div className="text-center mb-20 ">
+              <button className="btn btn-info text-white">Apply</button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   );
