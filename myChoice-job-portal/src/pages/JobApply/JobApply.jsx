@@ -2,6 +2,7 @@ import React from "react";
 import NavbarForAuth from "../Shared/NavbarForAuth";
 import { useParams } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import Swal from "sweetalert2";
 
 const JobApply = () => {
   const { user } = useAuth();
@@ -48,7 +49,15 @@ const JobApply = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        if (data.insertedId) {
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Your application has been saved",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        }
       });
   };
   return (
