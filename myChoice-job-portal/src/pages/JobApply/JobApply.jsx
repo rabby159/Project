@@ -23,18 +23,21 @@ const JobApply = () => {
     const portfolioUrl = form.portfolioUrl.value;
     const coverLetter = form.coverLetter.value;
     const file = form.file.value;
-    // console.log(
-    //   firstName,
-    //   lastName,
-    //   email,
-    //   phone,
-    //   linkedInUrl,
-    //   githubUrl,
-    //   portfolioUrl,
-    //   coverLetter,
-    //   resumeUrl,
-    //   file
-    // );
+
+    const jobApplication = {
+      job_id: id,
+      applicant_email: user.email,
+      firstName,
+      lastName,
+      email,
+      phone,
+      linkedInUrl,
+      githubUrl,
+      resumeUrl,
+      portfolioUrl,
+      coverLetter,
+      file,
+    };
   };
   return (
     <div>
