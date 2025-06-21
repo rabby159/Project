@@ -47,7 +47,7 @@ async function run() {
       const result = await jobsCollection.findOne(query);
       res.send(result);
 
-      app.post("job-application", async (req, res) => {
+      app.post("/job-applications", async (req, res) => {
         const application = req.body;
         const result = await jobApplicationCollection.insertOne(application);
         res.send(result);
