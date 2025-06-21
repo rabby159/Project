@@ -1,14 +1,14 @@
 import React from "react";
 import NavbarForAuth from "../Shared/NavbarForAuth";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import Swal from "sweetalert2";
 
 const JobApply = () => {
   const { user } = useAuth();
-  console.log(user);
   const { id } = useParams();
-  // console.log(id);
+  const navigate = useNavigate();
+
 
   const handleJobApplyForm = (e) => {
     e.preventDefault();
@@ -57,6 +57,7 @@ const JobApply = () => {
             showConfirmButton: false,
             timer: 1500,
           });
+          navigate('/myApplication')
         }
       });
   };
@@ -91,6 +92,7 @@ const JobApply = () => {
                     <input
                       type="text"
                       name="firstName"
+                      required
                       placeholder="Type here.."
                       className="input input-info"
                     />
@@ -103,6 +105,7 @@ const JobApply = () => {
                     <input
                       type="text"
                       name="lastName"
+                      required
                       placeholder="Type here.."
                       className="input input-info"
                     />
@@ -115,6 +118,7 @@ const JobApply = () => {
                     <input
                       type="email"
                       name="email"
+                      required
                       placeholder={user.email || "info@gmail.com"}
                       className="input input-info"
                     />
@@ -201,6 +205,7 @@ const JobApply = () => {
                     <textarea
                       placeholder="Type here.."
                       name="coverLetter"
+                      required
                       className="textarea textarea-info w-[580px]"
                     ></textarea>
                   </div>
