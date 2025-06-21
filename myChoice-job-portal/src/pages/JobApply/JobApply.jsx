@@ -1,11 +1,11 @@
 import React from "react";
 import NavbarForAuth from "../Shared/NavbarForAuth";
 import { useParams } from "react-router-dom";
-import useAuth from '../../hooks/useAuth'
+import useAuth from "../../hooks/useAuth";
 
 const JobApply = () => {
   const { user } = useAuth();
-  // console.log(user);
+  console.log(user);
   const { id } = useParams();
   // console.log(id);
 
@@ -23,7 +23,18 @@ const JobApply = () => {
     const portfolioUrl = form.portfolioUrl.value;
     const coverLetter = form.coverLetter.value;
     const file = form.file.value;
-    console.log(firstName);
+    // console.log(
+    //   firstName,
+    //   lastName,
+    //   email,
+    //   phone,
+    //   linkedInUrl,
+    //   githubUrl,
+    //   portfolioUrl,
+    //   coverLetter,
+    //   resumeUrl,
+    //   file
+    // );
   };
   return (
     <div>
@@ -80,7 +91,7 @@ const JobApply = () => {
                     <input
                       type="email"
                       name="email"
-                      placeholder="info@gmail.com"
+                      placeholder={user.email || "info@gmail.com"}
                       className="input input-info"
                     />
                   </div>
