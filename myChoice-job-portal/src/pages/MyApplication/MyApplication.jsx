@@ -16,14 +16,13 @@ const MyApplication = () => {
     <div>
       <NavbarForAuth></NavbarForAuth>
       <div className="max-w-7xl mx-auto my-5 overflow-x-auto">
-        <table className="table table-md">
+        <table className="table table-lg">
           <thead>
             <tr>
               <th>Tittle</th>
               <th>Company</th>
               <th>Location</th>
               <th>Job Type</th>
-              <th>Action</th>
             </tr>
           </thead>
           <tbody>
