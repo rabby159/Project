@@ -25,7 +25,14 @@ const NavbarForAuth = () => {
         <NavLink to="/employer">Employer</NavLink>
       </li>
       <li>
-        <NavLink to="/candidate">Candidate</NavLink>
+        <details>
+          <summary>Candidate</summary>
+          <ul className="bg-blue-50 w-[140px]">
+            <li className="text-sm">
+              <NavLink to="/myApplication">My Application</NavLink>
+            </li>
+          </ul>
+        </details>
       </li>
       <li>
         <NavLink to="/contact">Contact</NavLink>

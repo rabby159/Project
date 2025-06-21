@@ -25,7 +25,17 @@ const Navbar = () => {
         <NavLink to="/employer">Employer</NavLink>
       </li>
       <li>
-        <NavLink to="/candidate">Candidate</NavLink>
+        <details>
+          <summary>Candidate</summary>
+          <ul className="w-[140px]">
+            <li className="text-sm text-black">
+              <NavLink to="/myApplication">Profile</NavLink>
+            </li>
+            <li className="text-sm text-black">
+              <NavLink to="/myApplication">My Application</NavLink>
+            </li>
+          </ul>
+        </details>
       </li>
       <li>
         <NavLink to="/contact">Contact</NavLink>
@@ -94,7 +104,9 @@ const Navbar = () => {
         </div>
         <div className="md:navbar-end">
           <div className=" hidden lg:flex">
-            <ul className="menu menu-horizontal px-1 text-xl text-white">{NavLinks}</ul>
+            <ul className="menu menu-horizontal px-1 text-xl text-white">
+              {NavLinks}
+            </ul>
           </div>
           <div className="hidden md:flex">
             {user ? (
