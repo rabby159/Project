@@ -35,23 +35,34 @@ async function run() {
       .db("myChoiceJobPortal")
       .collection("job_application");
 
+    //All Jobs data
     app.get("/jobs", async (req, res) => {
       const cursor = jobsCollection.find();
       const result = await cursor.toArray();
       res.send(result);
     });
 
+    //Jobs data based on the Jobs ID
     app.get("/jobs/:id", async (req, res) => {
       const id = req.params.id;
       const query = { _id: new ObjectId(id) };
       const result = await jobsCollection.findOne(query);
       res.send(result);
+    });
 
-      app.post("/job-applications", async (req, res) => {
-        const application = req.body;
-        const result = await jobApplicationCollection.insertOne(application);
-        res.send(result);
-      });
+    //insert application data
+    app.post("/job-applications", async (req, res) => {
+      const application = req.body;
+      const result = await jobApplicationCollection.insertOne(application);
+      res.send(result);
+    });
+
+    //get application based on applicant email
+    app.get("/job-application", async (req, res) => {
+      const email = req.query.email;
+      const query = { applicant_email: email };
+      const result = await jobApplicationCollection.find(query).toArray();
+      res.send(result);
     });
   } finally {
     // Ensures that the client will close when you finish/error
