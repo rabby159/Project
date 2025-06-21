@@ -1,15 +1,18 @@
 import React from "react";
 
 const MyAppTable = ({ app }) => {
+  const { title, company_logo, jobType, location, company } = app;
+
   return (
-    <div>
-      <tr>
-        <th>1</th>
-        <td>Cy Ganderton</td>
-        <td>Quality Control Specialist</td>
-        <td>Littel, Schaden and Vandervort</td>
-      </tr>
-    </div>
+    <tr>
+      <td className="flex gap-3">
+        <img src={company_logo} alt="" className="w-10" />
+        {title}
+      </td>
+      <td>{company}</td>
+      <td>{location}</td>
+      <td>{jobType}</td>
+    </tr>
   );
 };
 

@@ -11,7 +11,7 @@ const MyApplication = () => {
     fetch(`http://localhost:3000/job-application?email=${user.email}`)
       .then((res) => res.json())
       .then((data) => setApplication(data));
-  }, []);
+  }, [user.email]);
   return (
     <div>
       <NavbarForAuth></NavbarForAuth>
@@ -22,6 +22,7 @@ const MyApplication = () => {
               <th>Tittle</th>
               <th>Company</th>
               <th>Location</th>
+              <th>Job Type</th>
               <th>Action</th>
             </tr>
           </thead>
