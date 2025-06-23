@@ -21,40 +21,44 @@ const AddJob = () => {
             {/* Personal information section*/}
             <div className="mt-10">
               <div className="bg-gray-800 text-base-300 text-center text-2xl font-bold p-5 rounded-t-xl">
-                <h1>Personal Information</h1>
+                <h1>General Information</h1>
               </div>
               <div className="p-5 border border-blue-100">
-                <div className="grid grid-cols-1 lg:grid-cols-3 ml-14">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 ml-14">
                   {/* Job Tittle */}
                   <div className="fieldset">
                     <label className="label">
-                      <span className="label-text">Job Title</span>
+                      <span className="label-text text-lg">Job Title</span>
                     </label>
                     <input
                       type="text"
                       name="title"
-                      className="input"
+                      className="input input-info"
                       placeholder="Type Here.."
                     />
                   </div>
                   {/* Company Name */}
                   <div className="fieldset">
                     <label className="label">
-                      <span className="label-text">Company Name</span>
+                      <span className="label-text text-lg">Company Name</span>
                     </label>
                     <input
                       type="text"
                       name="company"
-                      className="input"
+                      className="input input-info"
                       placeholder="Type here.."
                     />
                   </div>
                   {/* Category */}
                   <div className="fieldset">
                     <label className="label">
-                      <span className="label-text">Category</span>
+                      <span className="label-text text-lg">Category</span>
                     </label>
-                    <select defaultValue="Press to Select" name="category" className="select">
+                    <select
+                      defaultValue="Press to Select"
+                      name="category"
+                      className="select select-info"
+                    >
                       <option disabled={true}>Press to Select</option>
                       <option>Engineering</option>
                       <option>Marketing</option>
@@ -69,21 +73,25 @@ const AddJob = () => {
                   {/* No of vacancy */}
                   <div className="fieldset">
                     <label className="label">
-                      <span className="label-text">No of vacancy</span>
+                      <span className="label-text text-lg">No of vacancy</span>
                     </label>
                     <input
                       type="number"
                       name="vacancy"
-                      className="input"
+                      className="input input-info"
                       placeholder="Type Here.."
                     />
                   </div>
                   {/* Experience */}
                   <div className="fieldset">
                     <label className="label">
-                      <span className="label-text">Experience</span>
+                      <span className="label-text text-lg">Experience</span>
                     </label>
-                    <select defaultValue="Press to Select" name="experience" className="select">
+                    <select
+                      defaultValue="Press to Select"
+                      name="experience"
+                      className="select select-info"
+                    >
                       <option disabled={true}>Press to Select</option>
                       <option>Fresher</option>
                       <option>6 Month</option>
@@ -94,15 +102,92 @@ const AddJob = () => {
                   {/* Job Type */}
                   <div className="fieldset">
                     <label className="label">
-                      <span className="label-text">Job Type</span>
+                      <span className="label-text text-lg">Job Type</span>
                     </label>
-                    <select defaultValue="Press to Select" name="jobType" className="select">
+                    <select
+                      defaultValue="Press to Select"
+                      name="jobType"
+                      className="select select-info"
+                    >
                       <option disabled={true}>Press to Select</option>
                       <option>Full-time</option>
                       <option>Part-time</option>
                       <option>Contractual</option>
                       <option>Remote</option>
+                      <option>Intern</option>
                     </select>
+                  </div>
+                  {/* Description */}
+                  <div className="fieldset">
+                    <label className="label">
+                      <span className="label-text text-lg">Description</span>
+                    </label>
+                    <textarea
+                      placeholder="Info"
+                      name="description"
+                      className="textarea textarea-info"
+                    ></textarea>
+                  </div>
+                  {/* Requirement */}
+                  <div className="fieldset">
+                    <label className="label">
+                      <span className="label-text text-lg">Requirement</span>
+                    </label>
+                    <textarea
+                      placeholder="Info"
+                      name="requirement"
+                      className="textarea textarea-info"
+                    ></textarea>
+                  </div>
+                  {/* Responsibility */}
+                  <div className="fieldset">
+                    <label className="label">
+                      <span className="label-text text-lg">Responsibility</span>
+                    </label>
+                    <textarea
+                      placeholder="Info"
+                      name="responsibility"
+                      className="textarea textarea-info"
+                    ></textarea>
+                  </div>
+                </div>
+                {/* Salary Range */}
+                <div className="ml-14">
+                  <div className="fieldset">
+                    <label className="label">
+                      <span className="label-text text-lg">Salary Range</span>
+                    </label>
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-2">
+                      <div>
+                        <input
+                          type="number"
+                          name="min"
+                          className="input input-info"
+                          placeholder="Min"
+                        />
+                      </div>
+                      <div>
+                        <input
+                          type="number"
+                          name="max"
+                          className="input input-info"
+                          placeholder="Max"
+                        />
+                      </div>
+                      <div>
+                        <select
+                          defaultValue="Currency"
+                          name="currency"
+                          className="select select-info"
+                        >
+                          <option disabled={true}>Currency</option>
+                          <option>bdt</option>
+                          <option>usd</option>
+                          <option>euro</option>
+                          <option>inr</option>
+                        </select>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
