@@ -67,18 +67,12 @@ const JobCard = ({ job }) => {
             {salaryRange.min} - {salaryRange.max} / {salaryRange.currency}
           </h2>
           <Link to={`/jobs/${_id}`}>
-            <button className="btn btn-info text-white text-sm">Apply</button>
+            <button className="btn btn-info text-white text-sm">Details</button>
           </Link>
         </div>
       </div>
     </div>
   );
 };
-
-{
-  /* <div className="card-actions">
-            <button className="btn btn-primary">Buy Now</button>
-          </div> */
-}
 
 export default JobCard;
