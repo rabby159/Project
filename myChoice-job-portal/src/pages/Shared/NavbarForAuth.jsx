@@ -22,7 +22,14 @@ const NavbarForAuth = () => {
         <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink to="/employer">Employer</NavLink>
+        <details>
+          <summary>Employee</summary>
+          <ul className="bg-blue-50 w-[140px]">
+            <li className="text-sm text-black">
+              <NavLink to="/addJob">Add Job</NavLink>
+            </li>
+          </ul>
+        </details>
       </li>
       <li>
         <details>

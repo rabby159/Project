@@ -22,14 +22,21 @@ const Navbar = () => {
         <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink to="/employer">Employer</NavLink>
+        <details>
+          <summary>Employee</summary>
+          <ul className="bg-blue-50 w-[140px]">
+            <li className="text-sm text-black">
+              <NavLink to="/addJob">Add Job</NavLink>
+            </li>
+          </ul>
+        </details>
       </li>
       <li>
         <details>
           <summary>Candidate</summary>
-          <ul className="w-[140px]">
+          <ul className="bg-blue-50 w-[140px]">
             <li className="text-sm text-black">
-              <NavLink to="/myApplication">Profile</NavLink>
+              <NavLink to="/profile">Profile</NavLink>
             </li>
             <li className="text-sm text-black">
               <NavLink to="/myApplication">My Application</NavLink>
