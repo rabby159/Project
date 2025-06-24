@@ -1,5 +1,6 @@
 import React from "react";
 import NavbarForAuth from "../Shared/NavbarForAuth";
+import Swal from "sweetalert2";
 
 const AddJob = () => {
   const handleAddJob = (e) => {
@@ -29,7 +30,18 @@ const AddJob = () => {
       body: JSON.stringify(newJobs),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        if (data.insertedId) {
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Your new job has been added",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          navigate("/");
+        }
+      });
   };
 
   return (
