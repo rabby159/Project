@@ -81,6 +81,10 @@ const JobDetails = () => {
                     <LuBriefcaseBusiness />
                     {jobType}
                   </p>
+                  <p className="flex items-center gap-2">
+                    <LuBriefcaseBusiness />
+                    {status}
+                  </p>
                   <p className="flex items-center gap-2 ">
                     <CiCalendarDate />
                     Deadline:{" "}

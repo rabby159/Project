@@ -16,8 +16,8 @@ const AddJob = () => {
       currency,
     };
 
-    newJobs.requirement = newJobs.requirement.split("\n");
-    newJobs.responsibility = newJobs.responsibility.split("\n");
+    newJobs.requirements = newJobs.requirements.split("\n");
+    newJobs.responsibilities = newJobs.responsibilities.split("\n");
 
     // console.log(newJobs);
 
@@ -168,12 +168,12 @@ const AddJob = () => {
                   <div className="fieldset">
                     <label className="label">
                       <span className="label-text text-lg">
-                        Requirement(use new line for each)
+                        Requirements(use new line for each)
                       </span>
                     </label>
                     <textarea
                       placeholder="Info"
-                      name="requirement"
+                      name="requirements"
                       required
                       className="textarea textarea-info"
                     ></textarea>
@@ -182,12 +182,12 @@ const AddJob = () => {
                   <div className="fieldset">
                     <label className="label">
                       <span className="label-text text-lg">
-                        Responsibility(use new line for each)
+                        Responsibilities(use new line for each)
                       </span>
                     </label>
                     <textarea
                       placeholder="Info"
-                      name="responsibility"
+                      name="responsibilities"
                       required
                       className="textarea textarea-info"
                     ></textarea>
@@ -235,8 +235,9 @@ const AddJob = () => {
                     </div>
                   </div>
                 </div>
-                {/* company logo url */}
-                <div className="ml-14">
+                {/* last row */}
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 ml-14">
+                  {/* company logo url */}
                   <div className="fieldset">
                     <label className="label">
                       <span className="label-text text-lg">
@@ -250,6 +251,22 @@ const AddJob = () => {
                       className="input input-info"
                       placeholder="Type Here.."
                     />
+                  </div>
+                  {/* status */}
+                  <div className="fieldset">
+                    <label className="label">
+                      <span className="label-text text-lg">Status</span>
+                    </label>
+                    <select
+                      defaultValue="Press to Select"
+                      name="status"
+                      required
+                      className="select select-info"
+                    >
+                      <option disabled={true}>Press to Select</option>
+                      <option>Active</option>
+                      <option>In-active</option>
+                    </select>
                   </div>
                 </div>
               </div>
