@@ -2,6 +2,26 @@ import React from "react";
 import NavbarForAuth from "../Shared/NavbarForAuth";
 
 const AddJob = () => {
+  const handleAddJob = (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+    const initialData = Object.fromEntries(formData.entries());
+    // console.log(initialData);
+
+    const { min, max, currency, ...newJobs } = initialData;
+    newJobs.salaryRange = {
+      min,
+      max,
+      currency,
+    };
+
+    newJobs.requirement = newJobs.requirement.split("\n");
+    newJobs.responsibility = newJobs.responsibility.split("\n");
+
+    // console.log(newJobs);
+  };
+
   return (
     <div>
       <NavbarForAuth></NavbarForAuth>
@@ -15,7 +35,7 @@ const AddJob = () => {
         </div>
 
         {/* Full form */}
-        <form>
+        <form onSubmit={handleAddJob}>
           {/* input data part */}
           <div className="mb-10">
             {/* General information section*/}
@@ -33,6 +53,7 @@ const AddJob = () => {
                     <input
                       type="text"
                       name="title"
+                      required
                       className="input input-info"
                       placeholder="Type Here.."
                     />
@@ -45,6 +66,7 @@ const AddJob = () => {
                     <input
                       type="text"
                       name="company"
+                      required
                       className="input input-info"
                       placeholder="Type here.."
                     />
@@ -57,6 +79,7 @@ const AddJob = () => {
                     <select
                       defaultValue="Press to Select"
                       name="category"
+                      required
                       className="select select-info"
                     >
                       <option disabled={true}>Press to Select</option>
@@ -90,6 +113,7 @@ const AddJob = () => {
                     <select
                       defaultValue="Press to Select"
                       name="experience"
+                      required
                       className="select select-info"
                     >
                       <option disabled={true}>Press to Select</option>
@@ -107,6 +131,7 @@ const AddJob = () => {
                     <select
                       defaultValue="Press to Select"
                       name="jobType"
+                      required
                       className="select select-info"
                     >
                       <option disabled={true}>Press to Select</option>
@@ -125,28 +150,35 @@ const AddJob = () => {
                     <textarea
                       placeholder="Info"
                       name="description"
+                      required
                       className="textarea textarea-info"
                     ></textarea>
                   </div>
                   {/* Requirement */}
                   <div className="fieldset">
                     <label className="label">
-                      <span className="label-text text-lg">Requirement</span>
+                      <span className="label-text text-lg">
+                        Requirement(use new line for each)
+                      </span>
                     </label>
                     <textarea
                       placeholder="Info"
                       name="requirement"
+                      required
                       className="textarea textarea-info"
                     ></textarea>
                   </div>
                   {/* Responsibility */}
                   <div className="fieldset">
                     <label className="label">
-                      <span className="label-text text-lg">Responsibility</span>
+                      <span className="label-text text-lg">
+                        Responsibility(use new line for each)
+                      </span>
                     </label>
                     <textarea
                       placeholder="Info"
                       name="responsibility"
+                      required
                       className="textarea textarea-info"
                     ></textarea>
                   </div>
@@ -162,6 +194,7 @@ const AddJob = () => {
                         <input
                           type="number"
                           name="min"
+                          required
                           className="input input-info"
                           placeholder="Min"
                         />
@@ -170,6 +203,7 @@ const AddJob = () => {
                         <input
                           type="number"
                           name="max"
+                          required
                           className="input input-info"
                           placeholder="Max"
                         />
@@ -178,6 +212,7 @@ const AddJob = () => {
                         <select
                           defaultValue="Currency"
                           name="currency"
+                          required
                           className="select select-info"
                         >
                           <option disabled={true}>Currency</option>
@@ -194,11 +229,14 @@ const AddJob = () => {
                 <div className="ml-14">
                   <div className="fieldset">
                     <label className="label">
-                      <span className="label-text text-lg">Company Logo url</span>
+                      <span className="label-text text-lg">
+                        Company Logo url
+                      </span>
                     </label>
                     <input
                       type="url"
                       name="company_logo"
+                      required
                       className="input input-info"
                       placeholder="Type Here.."
                     />
@@ -221,6 +259,7 @@ const AddJob = () => {
                     <input
                       type="email"
                       name="hr_email"
+                      required
                       className="input input-info"
                       placeholder="Type Here.."
                     />
@@ -245,6 +284,7 @@ const AddJob = () => {
                     <input
                       type="text"
                       name="location"
+                      required
                       className="input input-info"
                       placeholder="Type Here.."
                     />
@@ -329,6 +369,7 @@ const AddJob = () => {
                     <input
                       type="url"
                       name="website"
+                      required
                       className="input input-info"
                       placeholder="Type Here.."
                     />
