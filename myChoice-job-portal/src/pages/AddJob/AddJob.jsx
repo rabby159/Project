@@ -192,6 +192,90 @@ const AddJob = () => {
                 </div>
               </div>
             </div>
+            {/* Personal information section*/}
+            <div className="mt-10">
+              <div className="bg-gray-800 text-base-300 text-center text-2xl font-bold p-5 rounded-t-xl">
+                <h1>Company Address</h1>
+              </div>
+              <div className="p-5 border border-blue-100">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 ml-14">
+                  {/* HR email */}
+                  <div className="fieldset">
+                    <label className="label">
+                      <span className="label-text text-lg">Email</span>
+                    </label>
+                    <input
+                      type="email"
+                      name="hr_email"
+                      className="input input-info"
+                      placeholder="Type Here.."
+                    />
+                  </div>
+                  {/* Phone */}
+                  <div className="fieldset">
+                    <label className="label">
+                      <span className="label-text text-lg">Phone</span>
+                    </label>
+                    <input
+                      type="number"
+                      name="hr_phone"
+                      className="input input-info"
+                      placeholder="Type here.."
+                    />
+                  </div>
+                  {/* Location */}
+                  <div className="fieldset">
+                    <label className="label">
+                      <span className="label-text text-lg">Location</span>
+                    </label>
+                    <input
+                      type="text"
+                      name="location"
+                      className="input input-info"
+                      placeholder="Type Here.."
+                    />
+                  </div>
+                  {/* City */}
+                  <div className="fieldset">
+                    <label className="label">
+                      <span className="label-text text-lg">City</span>
+                    </label>
+                    <select
+                      defaultValue="Press to Select"
+                      name="city"
+                      className="select select-info"
+                    >
+                      <option disabled={true}>Press to Select</option>
+                      <option>Dhaka</option>
+                      <option>Barisal</option>
+                      <option>Chittagong</option>
+                      <option>Khulna</option>
+                      <option>Syhet</option>
+                      <option>Myminshing</option>
+                      <option>Rajshahi</option>
+                    </select>
+                  </div>
+                  {/* Country */}
+                  <div className="fieldset">
+                    <label className="label">
+                      <span className="label-text text-lg">Country</span>
+                    </label>
+                    <select
+                      defaultValue="Press to Select"
+                      name="country"
+                      className="select select-info"
+                    >
+                      <option disabled={true}>Press to Select</option>
+                      <option>Bangladesh</option>
+                      <option>Pakistan</option>
+                      <option>USA</option>
+                      <option>Russia</option>
+                      <option>Japan</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           {/* Apply part*/}
           <div>
