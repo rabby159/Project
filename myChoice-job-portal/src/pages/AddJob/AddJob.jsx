@@ -190,6 +190,20 @@ const AddJob = () => {
                     </div>
                   </div>
                 </div>
+                {/* company logo url */}
+                <div className="ml-14">
+                  <div className="fieldset">
+                    <label className="label">
+                      <span className="label-text text-lg">Company Logo url</span>
+                    </label>
+                    <input
+                      type="url"
+                      name="company_logo"
+                      className="input input-info"
+                      placeholder="Type Here.."
+                    />
+                  </div>
+                </div>
               </div>
             </div>
             {/* Company address section*/}
