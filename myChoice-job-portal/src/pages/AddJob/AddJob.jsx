@@ -20,6 +20,16 @@ const AddJob = () => {
     newJobs.responsibility = newJobs.responsibility.split("\n");
 
     // console.log(newJobs);
+
+    fetch("http://localhost:3000/jobs", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newJobs),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
   };
 
   return (
