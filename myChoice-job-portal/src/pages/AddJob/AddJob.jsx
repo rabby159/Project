@@ -18,7 +18,7 @@ const AddJob = () => {
         <form>
           {/* input data part */}
           <div className="mb-10">
-            {/* Personal information section*/}
+            {/* General information section*/}
             <div className="mt-10">
               <div className="bg-gray-800 text-base-300 text-center text-2xl font-bold p-5 rounded-t-xl">
                 <h1>General Information</h1>
@@ -192,7 +192,7 @@ const AddJob = () => {
                 </div>
               </div>
             </div>
-            {/* Personal information section*/}
+            {/* Company address section*/}
             <div className="mt-10">
               <div className="bg-gray-800 text-base-300 text-center text-2xl font-bold p-5 rounded-t-xl">
                 <h1>Company Address</h1>
@@ -272,6 +272,52 @@ const AddJob = () => {
                       <option>Russia</option>
                       <option>Japan</option>
                     </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* social media url section*/}
+            <div className="mt-10">
+              <div className="bg-gray-800 text-base-300 text-center text-2xl font-bold p-5 rounded-t-xl">
+                <h1>Social Link</h1>
+              </div>
+              <div className="p-5 border border-blue-100">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 ml-14">
+                  {/* facebook url */}
+                  <div className="fieldset">
+                    <label className="label">
+                      <span className="label-text text-lg">Facebook url</span>
+                    </label>
+                    <input
+                      type="url"
+                      name="facebook"
+                      className="input input-info"
+                      placeholder="Type Here.."
+                    />
+                  </div>
+                  {/* linkedIn url */}
+                  <div className="fieldset">
+                    <label className="label">
+                      <span className="label-text text-lg">LinkedIn url</span>
+                    </label>
+                    <input
+                      type="url"
+                      name="linkedIn"
+                      className="input input-info"
+                      placeholder="Type Here.."
+                    />
+                  </div>
+                  {/* website url */}
+                  <div className="fieldset">
+                    <label className="label">
+                      <span className="label-text text-lg">Website url</span>
+                    </label>
+                    <input
+                      type="url"
+                      name="website"
+                      className="input input-info"
+                      placeholder="Type Here.."
+                    />
                   </div>
                 </div>
               </div>
