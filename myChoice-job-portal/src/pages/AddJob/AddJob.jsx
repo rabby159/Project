@@ -280,6 +280,19 @@ const AddJob = () => {
                       <option>In-active</option>
                     </select>
                   </div>
+                  {/* applicationDeadline */}
+                  <div className="fieldset">
+                    <label className="label">
+                      <span className="label-text text-lg">Deadline</span>
+                    </label>
+                    <input
+                      type="date"
+                      name="applicationDeadline"
+                      required
+                      className="input input-info"
+                      placeholder="Type here.."
+                    />
+                  </div>
                 </div>
               </div>
             </div>
