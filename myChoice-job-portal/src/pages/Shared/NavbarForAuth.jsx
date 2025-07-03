@@ -114,7 +114,9 @@ const NavbarForAuth = () => {
         </div>
         <div className="md:navbar-end">
           <div className=" hidden lg:flex">
-            <ul className="menu menu-horizontal px-1 text-xl">{NavLinks}</ul>
+            <ul className="menu menu-horizontal z-20 px-1 text-xl">
+              {NavLinks}
+            </ul>
           </div>
           <div className="hidden md:flex">
             {user ? (
