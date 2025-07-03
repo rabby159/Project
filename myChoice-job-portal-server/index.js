@@ -70,6 +70,9 @@ async function run() {
     app.post("/job-applications", async (req, res) => {
       const application = req.body;
       const result = await jobApplicationCollection.insertOne(application);
+
+      
+
       res.send(result);
     });
 
