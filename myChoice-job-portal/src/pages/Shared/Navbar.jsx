@@ -28,6 +28,9 @@ const Navbar = () => {
             <li className="text-sm text-black">
               <NavLink to="/addJob">Add Job</NavLink>
             </li>
+            <li className="text-sm text-black">
+              <NavLink to="/myPostedJob">My Posted Job</NavLink>
+            </li>
           </ul>
         </details>
       </li>
