@@ -6,6 +6,7 @@ import BannerSignIn from "./BannerSignIn";
 import AuthContext from "../../context/AuthContext/AuthContext";
 import NavbarForAuth from "../Shared/NavbarForAuth";
 import SocialLogin from "../Shared/SocialLogin";
+import axios from "axios";
 
 const SignIn = () => {
   const { signInUser } = useContext(AuthContext);
@@ -22,8 +23,12 @@ const SignIn = () => {
 
     signInUser(email, password)
       .then((result) => {
-        console.log(result.user);
-        navigate(from);
+        // console.log(result.user.email);
+        const user = { email: email };
+        axios.post(`http://localhost:3000/jwt`, user).then((data) => {
+          console.log(data);
+        });
+        // navigate(from);
       })
       .catch((error) => {
         console.log(error.message);

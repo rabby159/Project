@@ -1,7 +1,9 @@
 const express = require("express");
-require("dotenv").config();
+const jwt = require("jsonwebtoken");
 const cors = require("cors");
 const app = express();
+require("dotenv").config();
+
 const port = process.env.PORT || 3000;
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 
@@ -34,6 +36,13 @@ async function run() {
     const jobApplicationCollection = client
       .db("myChoiceJobPortal")
       .collection("job_application");
+
+    //Auth related APIs
+    app.post("/jwt", async (req, res) => {
+      const user = req.body;
+      const token = jwt.sign(user, "secret", { expiresIn: "1h" });
+      res.send(token);
+    });
 
     //All Jobs data
     app.get("/jobs", async (req, res) => {
@@ -70,8 +79,6 @@ async function run() {
     app.post("/job-applications", async (req, res) => {
       const application = req.body;
       const result = await jobApplicationCollection.insertOne(application);
-
-      
 
       res.send(result);
     });
