@@ -12,6 +12,7 @@ import logo from "../../../assets/logo/zippyGoLogo.png";
 import { ArrowUpRightIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "react-router";
+import { Telescope } from "lucide-react";
 
 // drawer
 import { Logs } from "lucide-react";
@@ -58,7 +59,7 @@ const components = [
 const Navbar = () => {
   return (
     <div className="max-w-7xl mx-auto p-3 bg-white rounded-2xl mt-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 items-center">
         {/* logo & drawer-menu */}
         <div className="flex items-center gap-2">
           <div className="block lg:hidden">
@@ -94,7 +95,7 @@ const Navbar = () => {
           />
         </div>
         {/* menu */}
-        <div className="lg:col-span-2">
+        <div className="lg:col-span-3">
           <NavigationMenu className="hidden lg:block">
             <NavigationMenuList className="flex">
               {/* Pricing Section */}
@@ -189,7 +190,11 @@ const Navbar = () => {
           </NavigationMenu>
         </div>
         {/* button */}
-        <div className="flex gap-2 mt-4 lg:mt-0 justify-center lg:justify-end">
+        <div className="flex gap-2 mt-4 lg:mt-0 justify-center items-center lg:justify-end lg:col-span-2">
+          <div className="flex gap-1 mr-4">
+            <Telescope className="text-[#EE4E32]" />
+            <h2 className="text-[#EE4E32] font-medium">Track Parcel</h2>
+          </div>
           <Button variant="outline">SignIn</Button>
           <Button className="bg-[#EE4E32] text-white" variant="none">
             Be a Rider
