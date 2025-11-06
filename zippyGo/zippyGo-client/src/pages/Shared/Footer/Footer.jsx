@@ -58,6 +58,7 @@ const Footer = () => {
 
           {/* last part */}
           <div className="flex flex-col items-center text-center">
+            <p className="mb-5 font-bold">For Mobile App</p>
             <div className="flex gap-2 mb-3">
               <img src={apple} alt="" />
               <img src={google} alt="" />
