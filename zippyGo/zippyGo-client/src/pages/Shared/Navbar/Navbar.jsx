@@ -1,7 +1,5 @@
 import React from "react";
-
 import { CircleCheck, CircleHelp, Circle } from "lucide-react";
-
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -12,6 +10,8 @@ import {
   navigationMenuTriggerStyle,
 } from "../../../components/ui/navigation-menu";
 import logo from "../../../assets/logo/zippyGoLogo.png";
+import { ArrowUpRightIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const components = [
   {
@@ -53,17 +53,23 @@ const components = [
 
 const Navbar = () => {
   return (
-    <div className="max-w-7xl mx-auto p-3 bg-neutral-100 rounded-2xl mt-2">
-      <div className="flex justify-between items-center">
+    <div className="max-w-7xl mx-auto p-3 bg-white rounded-2xl mt-4">
+      <div className="grid grid-cols-1 lg:grid-cols-4 items-center">
+        {/* logo */}
         <div>
           <img className="w-13 h-13 rounded-l-sm" src={logo} alt="" />
         </div>
-        <div>
+        {/* menu */}
+        <div className="col-span-2">
           <NavigationMenu>
-            <NavigationMenuList className="flex-wrap">
-              {/* Home Section */}
+            <NavigationMenuList className="flex">
+              {/* Pricing Section */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Home</NavigationMenuTrigger>
+                <NavigationMenuTrigger>
+                  <h3 className=" hover:text-[#EE4E32] font-medium text-[1.2em]">
+                    Pricing
+                  </h3>
+                </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                     <li className="row-span-3">
@@ -98,9 +104,13 @@ const Navbar = () => {
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
-              {/* Components Section */}
+              {/* Services Section */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+                <NavigationMenuTrigger>
+                  <h3 className=" hover:text-[#EE4E32] font-medium text-[1.2em]">
+                    Services
+                  </h3>
+                </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid gap-2 sm:w-[400px] md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                     {components.map((component) => (
@@ -116,69 +126,52 @@ const Navbar = () => {
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
-              {/* Docs Link */}
+              {/* Coverage Link */}
               <NavigationMenuItem>
                 <NavigationMenuLink
                   asChild
-                  className={navigationMenuTriggerStyle()}
+                  className=" hover:text-[#EE4E32] font-medium text-[1em]"
                 >
-                  <a href="/docs">Docs</a>
+                  <a href="/docs">Coverage</a>
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
-              {/* Simple Menu */}
-              <NavigationMenuItem className="hidden md:block">
-                <NavigationMenuTrigger>Simple</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[200px] gap-4">
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <a href="#">Components</a>
-                      </NavigationMenuLink>
-                      <NavigationMenuLink asChild>
-                        <a href="#">Documentation</a>
-                      </NavigationMenuLink>
-                      <NavigationMenuLink asChild>
-                        <a href="#">Blocks</a>
-                      </NavigationMenuLink>
-                    </li>
-                  </ul>
-                </NavigationMenuContent>
+              {/* About Us Menu */}
+              <NavigationMenuItem className="">
+                <NavigationMenuLink
+                  asChild
+                  className=" hover:text-[#EE4E32] font-medium text-[1em]"
+                >
+                  <a href="/docs">About Us</a>
+                </NavigationMenuLink>
               </NavigationMenuItem>
 
               {/* With Icons */}
-              <NavigationMenuItem className="hidden md:block">
-                <NavigationMenuTrigger>With Icon</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[200px] gap-4">
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <a href="#" className="flex items-center gap-2">
-                          <CircleHelp className="w-4 h-4" />
-                          Backlog
-                        </a>
-                      </NavigationMenuLink>
-                      <NavigationMenuLink asChild>
-                        <a href="#" className="flex items-center gap-2">
-                          <Circle className="w-4 h-4" />
-                          To Do
-                        </a>
-                      </NavigationMenuLink>
-                      <NavigationMenuLink asChild>
-                        <a href="#" className="flex items-center gap-2">
-                          <CircleCheck className="w-4 h-4" />
-                          Done
-                        </a>
-                      </NavigationMenuLink>
-                    </li>
-                  </ul>
-                </NavigationMenuContent>
+              <NavigationMenuItem className="">
+                <NavigationMenuLink
+                  asChild
+                  className=" hover:text-[#EE4E32] font-medium text-[1em]"
+                >
+                  <a href="/docs">Be a Rider</a>
+                </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
         </div>
-        <div>
-          <button>start</button>
+        {/* button */}
+        <div className="flex gap-2 justify-end">
+          <Button variant="outline">SignIn</Button>
+          <Button className="bg-[#EE4E32] text-white" variant="none">
+            Be a Rider
+          </Button>
+          <Button
+            className="rounded-3xl border-[#EE4E32]"
+            size="icon"
+            aria-label="Submit"
+            variant="outline"
+          >
+            <ArrowUpRightIcon />
+          </Button>
         </div>
       </div>
     </div>

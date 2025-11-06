@@ -1,10 +1,11 @@
 import Navbar from "@/pages/Shared/Navbar/Navbar";
 import React from "react";
 import { Outlet } from "react-router";
+import "../../App.css";
 
 const mainLayout = () => {
   return (
-    <div>
+    <div className="bg-gray-50">
       <Navbar></Navbar>
       <div className="max-w-7xl mx-auto">
         <Outlet></Outlet>
