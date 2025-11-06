@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button";
 import { NavLink } from "react-router";
 
 // drawer
-import { PanelTopOpen } from "lucide-react";
+import { Logs } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -65,7 +65,7 @@ const Navbar = () => {
             <DropdownMenu modal={false}>
               <DropdownMenuTrigger asChild>
                 <Button variant="outline" aria-label="Open menu" size="icon-lg">
-                  <PanelTopOpen />
+                  <Logs />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-40" align="end">
@@ -87,7 +87,11 @@ const Navbar = () => {
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
-          <img className="w-10 h-10 lg:w-13 lg:h-13 rounded-l-sm" src={logo} alt="" />
+          <img
+            className="w-10 h-10 lg:w-13 lg:h-13 rounded-l-sm"
+            src={logo}
+            alt=""
+          />
         </div>
         {/* menu */}
         <div className="lg:col-span-2">
