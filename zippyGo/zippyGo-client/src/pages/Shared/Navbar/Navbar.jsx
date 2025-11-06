@@ -7,61 +7,91 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "../../../components/ui/navigation-menu";
 import logo from "../../../assets/logo/zippyGoLogo.png";
 import { ArrowUpRightIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { NavLink } from "react-router";
+
+// drawer
+import { PanelTopOpen } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const components = [
   {
-    title: "Alert Dialog",
-    href: "/alert-dialog",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
+    title: "Express  & Standard Delivery",
+    href: "/express",
+    description: "Fast or scheduled delivery, your choice.",
   },
   {
-    title: "Hover Card",
-    href: "/hover-card",
-    description:
-      "For sighted users to preview content available behind a link.",
+    title: "Nationwide Delivery",
+    href: "/nationwide",
+    description: "Safe delivery across Bangladesh.",
   },
   {
-    title: "Progress",
-    href: "/progress",
-    description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+    title: "Fulfillment Solution",
+    href: "/fulfillment",
+    description: "We store, pack, and ship for you.",
   },
   {
-    title: "Scroll Area",
-    href: "/scroll-area",
-    description: "Visually or semantically separates content.",
+    title: "Cash on Home Delivery",
+    href: "/cash",
+    description: "Easy doorstep payment.",
   },
   {
-    title: "Tabs",
-    href: "/tabs",
-    description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+    title: "Corporate Service",
+    href: "/corporate",
+    description: "Smart delivery for business needs.",
   },
   {
-    title: "Tooltip",
-    href: "/tooltip",
-    description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+    title: "Parcel Return",
+    href: "/return",
+    description: "Quick and simple return handling.",
   },
 ];
 
 const Navbar = () => {
   return (
     <div className="max-w-7xl mx-auto p-3 bg-white rounded-2xl mt-4">
-      <div className="grid grid-cols-1 lg:grid-cols-4 items-center">
-        {/* logo */}
-        <div>
-          <img className="w-13 h-13 rounded-l-sm" src={logo} alt="" />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center">
+        {/* logo & drawer-menu */}
+        <div className="flex items-center gap-2">
+          <div className="block lg:hidden">
+            <DropdownMenu modal={false}>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline" aria-label="Open menu" size="icon-lg">
+                  <PanelTopOpen />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-40" align="end">
+                <DropdownMenuLabel>
+                  <NavLink to="/pricing">Pricing</NavLink>
+                </DropdownMenuLabel>
+                <DropdownMenuLabel>
+                  <NavLink to="/services">Services</NavLink>
+                </DropdownMenuLabel>
+                <DropdownMenuLabel>
+                  <NavLink to="/coverage">Coverage</NavLink>
+                </DropdownMenuLabel>
+                <DropdownMenuLabel>
+                  <NavLink to="/about">About Us</NavLink>
+                </DropdownMenuLabel>
+                <DropdownMenuLabel>
+                  <NavLink to="/rider">Be a Rider</NavLink>
+                </DropdownMenuLabel>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
+          <img className="w-10 h-10 lg:w-13 lg:h-13 rounded-l-sm" src={logo} alt="" />
         </div>
         {/* menu */}
-        <div className="col-span-2">
-          <NavigationMenu>
+        <div className="lg:col-span-2">
+          <NavigationMenu className="hidden lg:block">
             <NavigationMenuList className="flex">
               {/* Pricing Section */}
               <NavigationMenuItem>
@@ -79,26 +109,22 @@ const Navbar = () => {
                           href="/"
                         >
                           <div className="mb-2 text-lg font-medium sm:mt-4">
-                            Shadcn/UI
+                            ZippyGo
                           </div>
                           <p className="text-muted-foreground text-sm leading-tight">
-                            Beautifully designed components built with Tailwind
-                            CSS.
+                            ZippyGo - Where Every Second Counts.
                           </p>
                         </a>
                       </NavigationMenuLink>
                     </li>
-                    <ListItem href="/docs" title="Introduction">
-                      Reusable components built using Radix UI and Tailwind CSS.
+                    <ListItem href="/calculation" title="Calculation">
+                      You can easily calculate your delivery charge here.
                     </ListItem>
-                    <ListItem href="/docs/installation" title="Installation">
-                      How to install dependencies and structure your app.
+                    <ListItem href="/policy" title="Pricing Policy">
+                      Know about the rules of pricing.
                     </ListItem>
-                    <ListItem
-                      href="/docs/primitives/typography"
-                      title="Typography"
-                    >
-                      Styles for headings, paragraphs, lists, etc.
+                    <ListItem href="/offers" title="Offers">
+                      Your offers are here.
                     </ListItem>
                   </ul>
                 </NavigationMenuContent>
@@ -132,7 +158,7 @@ const Navbar = () => {
                   asChild
                   className=" hover:text-[#EE4E32] font-medium text-[1em]"
                 >
-                  <a href="/docs">Coverage</a>
+                  <NavLink to="/coverage">Coverage</NavLink>
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
@@ -142,24 +168,24 @@ const Navbar = () => {
                   asChild
                   className=" hover:text-[#EE4E32] font-medium text-[1em]"
                 >
-                  <a href="/docs">About Us</a>
+                  <NavLink to="/about">About Us</NavLink>
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
-              {/* With Icons */}
+              {/* Rider */}
               <NavigationMenuItem className="">
                 <NavigationMenuLink
                   asChild
                   className=" hover:text-[#EE4E32] font-medium text-[1em]"
                 >
-                  <a href="/docs">Be a Rider</a>
+                  <NavLink to="/rider">Be a Rider</NavLink>
                 </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
         </div>
         {/* button */}
-        <div className="flex gap-2 justify-end">
+        <div className="flex gap-2 mt-4 lg:mt-0 justify-center lg:justify-end">
           <Button variant="outline">SignIn</Button>
           <Button className="bg-[#EE4E32] text-white" variant="none">
             Be a Rider
