@@ -196,7 +196,7 @@ const Navbar = () => {
             <h2 className="text-[#EE4E32] font-medium">Track Parcel</h2>
           </div>
           <Button variant="outline">SignIn</Button>
-          <Button className="bg-[#EE4E32] text-white" variant="none">
+          <Button className="bg-[#EE4E32] text-white">
             Be a Rider
           </Button>
           <Button
