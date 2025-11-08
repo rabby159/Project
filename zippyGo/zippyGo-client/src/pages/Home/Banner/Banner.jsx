@@ -1,5 +1,5 @@
 import React from "react";
-import bannerImg from "../../assets/bannerImg/4363221_2325156-removebg-preview.png";
+import bannerImg from "../../../assets/bannerImg/4363221_2325156-removebg-preview.png";
 import { Button } from "@/components/ui/button";
 import { GiDeliveryDrone } from "react-icons/gi";
 import { BsPersonBadge } from "react-icons/bs";
