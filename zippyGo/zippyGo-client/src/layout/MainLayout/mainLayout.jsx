@@ -6,9 +6,9 @@ import Footer from "@/pages/Shared/Footer/Footer";
 
 const mainLayout = () => {
   return (
-    <div className="bg-gradient-to-r from-amber-50 via-amber-100 to-amber-50 h-screen w-full">
+    <div >
       <Navbar></Navbar>
-      <div className="max-w-7xl mx-auto">
+      <div>
         <Outlet></Outlet>
       </div>
       <Footer></Footer>
