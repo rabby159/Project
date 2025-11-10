@@ -6,11 +6,9 @@ import Footer from "@/pages/Shared/Footer/Footer";
 
 const mainLayout = () => {
   return (
-    <div >
+    <div>
       <Navbar></Navbar>
-      <div>
-        <Outlet></Outlet>
-      </div>
+      <Outlet></Outlet>
       <Footer></Footer>
     </div>
   );
