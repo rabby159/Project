@@ -12,14 +12,20 @@ const Services = () => {
         "Get your parcels delivered quickly with our reliable express service.",
     },
     {
+      animation:
+        "https://lottie.host/88f5e681-7b82-4439-8243-e6bb1c558a47/PLE8p4YXMN.json",
       title: "Safe Packaging",
       description: "We ensure secure and careful handling of all items.",
     },
     {
+      animation:
+        "https://lottie.host/43f227d0-c915-4bc8-9034-2f0309aa28db/SLZb7qUGzl.json",
       title: "24/7 Support",
       description: "Our support team is always available to assist you.",
     },
     {
+      animation:
+        "https://lottie.host/5a619850-ce6c-4906-808c-7a0594e412a0/OktILiUYlk.json",
       title: "Trusted Service",
       description:
         "We guarantee safety, transparency, and trust for every delivery.",
