@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import {
   Package,
@@ -8,6 +8,7 @@ import {
   Truck,
   Monitor,
 } from "lucide-react";
+import Aos from "aos";
 
 const serviceDetails = [
   {
@@ -49,6 +50,13 @@ const serviceDetails = [
 ];
 
 const WhyUs = () => {
+  useEffect(() => {
+    Aos.init({
+    //   duration: 5000, // animation duration (in ms)
+    //   once: false, // animation happens only once while scrolling
+    });
+  }, []);
+
   return (
     <section className="bg-gradient-to-r from-amber-50 via-amber-100 to-amber-50 w-full p-10">
       <div className="max-w-7xl mx-auto">
@@ -61,6 +69,9 @@ const WhyUs = () => {
             <Card
               key={index}
               className="flex gap-6 p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 rounded-2xl bg-white border border-orange-100"
+              data-aos="fade-right"
+              data-aos-delay="900"
+              data-aos-duration="1500"
             >
               <div className="flex-shrink-0">{service.icon}</div>
               <div>
