@@ -15,13 +15,13 @@ const Brands = () => {
     { src: [dhl], alt: "DHL" },
     { src: [etsy], alt: "etsy" },
     { src: [zalatan], alt: "UPS" },
-    { src: [flip], alt: "Flip" },
     { src: [Ali], alt: "Ali" },
     { src: [amazon], alt: "Amazon" },
     { src: [Door], alt: "Door" },
     { src: [gru], alt: "Door" },
     { src: [Door], alt: "Door" },
     { src: [Revoult], alt: "Revoult" },
+    { src: [flip], alt: "Flip" },
   ];
 
   return (
