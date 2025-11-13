@@ -1,12 +1,83 @@
 import React from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Package, CreditCard, Clock, Headphones } from "lucide-react";
+import {
+  Package,
+  CreditCard,
+  Clock,
+  Headphones,
+  Truck,
+  Monitor,
+} from "lucide-react";
+
+const serviceDetails = [
+  {
+    icon: <Truck className="h-10 w-10 text-orange-500" />,
+    title: "Daily Pickup, No Limits",
+    description:
+      "ZippyGo gives you the freedom of unlimited daily pickups — whenever and wherever you need.",
+  },
+  {
+    icon: <CreditCard className="h-10 w-10 text-orange-500" />,
+    title: "Cash on Delivery",
+    description:
+      "We collect payments on your behalf and transfer them safely to your account.",
+  },
+  {
+    icon: <Package className="h-10 w-10 text-orange-500" />,
+    title: "Faster Payment Service",
+    description:
+      "We support multiple payment options — Cash, Bank Transfer, and Mobile Banking.",
+  },
+  {
+    icon: <Monitor className="h-10 w-10 text-orange-500" />,
+    title: "Online Management",
+    description:
+      "Access all your delivery and payment information easily in your personal dashboard.",
+  },
+  {
+    icon: <Clock className="h-10 w-10 text-orange-500" />,
+    title: "Real-Time Tracking",
+    description:
+      "Track every parcel with a unique code and monitor your delivery journey live.",
+  },
+  {
+    icon: <Headphones className="h-10 w-10 text-orange-500" />,
+    title: "24/7 Customer Service",
+    description:
+      "Our dedicated support team is available anytime to assist you with any delivery concerns.",
+  },
+];
 
 const WhyUs = () => {
   return (
-    <div>
-      <h1>Hi</h1>
-    </div>
+    <section className="bg-gradient-to-r from-amber-50 via-amber-100 to-amber-50 w-full p-10">
+      <div className="max-w-7xl mx-auto">
+        <h1 className="text-center text-3xl font-bold">
+          Why you should choose
+        </h1>
+        <h1 className="text-center text-3xl font-bold">ZippyGo?</h1>
+        <div className="grid md:grid-cols-2 gap-6 my-10">
+          {serviceDetails.map((service, index) => (
+            <Card
+              key={index}
+              className="flex gap-6 p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 rounded-2xl bg-white border border-orange-100"
+            >
+              <div className="flex-shrink-0">{service.icon}</div>
+              <div>
+                <CardHeader className="p-0">
+                  <CardTitle className="text-lg font-semibold text-gray-900">
+                    {service.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="p-0 mt-2">
+                  <p className="text-sm text-gray-600">{service.description}</p>
+                </CardContent>
+              </div>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 
