@@ -52,8 +52,8 @@ const serviceDetails = [
 const WhyUs = () => {
   useEffect(() => {
     Aos.init({
-    //   duration: 5000, // animation duration (in ms)
-    //   once: false, // animation happens only once while scrolling
+      //   duration: 5000, // animation duration (in ms)
+      //   once: false, // animation happens only once while scrolling
     });
   }, []);
 
@@ -92,4 +92,5 @@ const WhyUs = () => {
   );
 };
 
+//rabby213
 export default WhyUs;
