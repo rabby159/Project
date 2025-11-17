@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
+import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const testimonials = [
   {
@@ -53,9 +56,83 @@ const testimonials = [
 ];
 
 const Testimonial = () => {
+  const [index, setIndex] = useState(0);
+
+  const prevSlide = () => {
+    setIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
+  };
+
+  const nextSlide = () => {
+    setIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
+  };
   return (
-    <div>
-      <h1>hi</h1>
+    <div className="max-w-6xl mx-auto my-20 text-center px-4">
+      <h2 className="text-3xl font-semibold mb-10">What Our Customers Say</h2>
+
+      <div className="relative flex items-center justify-center gap-5">
+        {/* Left Arrow */}
+        <button
+          onClick={prevSlide}
+          className="p-3 bg-gray-200 rounded-full hover:bg-gray-300 transition"
+        >
+          <ChevronLeft />
+        </button>
+
+        {/* Slider Cards */}
+        <div className="flex items-center justify-center gap-7 overflow-hidden w-full">
+          {testimonials.map((t, i) => {
+            const active = i === index;
+
+            return (
+              <Card
+                key={t.id}
+                className={`transition-all duration-500 shadow-md border
+                  ${
+                    active
+                      ? "w-96 scale-105 opacity-100 bg-white"
+                      : "w-72 scale-90 opacity-40 bg-gray-100"
+                  }`}
+              >
+                <CardContent className="p-7">
+                  <Quote className="w-8 h-8 text-orange-500 mx-auto mb-3" />
+                  <p className="text-gray-700 italic mb-6">"{t.text}"</p>
+
+                  <div className="flex flex-col items-center">
+                    <Avatar className="w-14 h-14 mb-2">
+                      <AvatarImage src={t.img} />
+                      <AvatarFallback>U</AvatarFallback>
+                    </Avatar>
+
+                    <h4 className="font-semibold">{t.name}</h4>
+                    <p className="text-sm text-gray-500">{t.position}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            );
+          })}
+        </div>
+
+        {/* Right Arrow */}
+        <button
+          onClick={nextSlide}
+          className="p-3 bg-gray-200 rounded-full hover:bg-gray-300 transition"
+        >
+          <ChevronRight />
+        </button>
+      </div>
+
+      {/* Dots */}
+      <div className="flex justify-center mt-6 gap-2">
+        {testimonials.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setIndex(i)}
+            className={`h-3 rounded-full transition-all ${
+              i === index ? "bg-orange-500 w-6" : "bg-gray-400 w-3"
+            }`}
+          ></button>
+        ))}
+      </div>
     </div>
   );
 };
