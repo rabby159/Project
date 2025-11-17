@@ -58,7 +58,7 @@ const WhyUs = () => {
   }, []);
 
   return (
-    <section className="bg-gradient-to-r from-amber-50 via-amber-100 to-amber-50 w-full p-10">
+    <section className="bg-gradient-to-r from-amber-50 via-amber-100 to-amber-50 w-full p-10 my-20">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-center text-3xl font-bold">
           Why you should choose
@@ -70,8 +70,8 @@ const WhyUs = () => {
               key={index}
               className="flex gap-6 p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 rounded-2xl bg-white border border-orange-100"
               data-aos="fade-right"
-              data-aos-delay="900"
-              data-aos-duration="1500"
+              data-aos-delay="800"
+              data-aos-duration="1400"
             >
               <div className="flex-shrink-0">{service.icon}</div>
               <div>
@@ -92,5 +92,4 @@ const WhyUs = () => {
   );
 };
 
-//rabby213
 export default WhyUs;
