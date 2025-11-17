@@ -64,7 +64,7 @@ const WhyUs = () => {
           Why you should choose
         </h1>
         <h1 className="text-center text-3xl font-bold">ZippyGo?</h1>
-        <div className="grid md:grid-cols-2 gap-6 my-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 my-10">
           {serviceDetails.map((service, index) => (
             <Card
               key={index}
