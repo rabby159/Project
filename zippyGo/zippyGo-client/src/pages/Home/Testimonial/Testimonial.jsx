@@ -57,6 +57,9 @@ const testimonials = [
 
 const Testimonial = () => {
   const [index, setIndex] = useState(0);
+  const leftIndex = (index - 1 + testimonials.length) % testimonials.length;
+  const centerIndex = index;
+  const rightIndex = (index + 1) % testimonials.length;
 
   const prevSlide = () => {
     setIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
@@ -67,10 +70,10 @@ const Testimonial = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto my-20 text-center px-4">
+    <div className="max-w-5xl mx-auto my-20 text-center px-4">
       <h2 className="text-3xl font-semibold mb-10">What Our Customers Say</h2>
 
-      <div className="relative flex items-center justify-center gap-5">
+      <div className="flex items-center justify-center gap-5">
         {/* Left Arrow */}
         <button
           onClick={prevSlide}
@@ -80,18 +83,19 @@ const Testimonial = () => {
         </button>
 
         {/* Slider Cards */}
-        <div className="flex items-center justify-center gap-7 overflow-hidden w-full">
-          {testimonials.map((t, i) => {
-            const active = i === index;
+        <div className="grid grid-cols-3 items-center justify-center gap-7">
+          {[leftIndex, centerIndex, rightIndex].map((slideIndex, pos) => {
+            const t = testimonials[slideIndex];
+            const active = pos === 1;
 
             return (
               <Card
                 key={t.id}
-                className={`transition-all duration-500 shadow-md border
+                className={`transition-transform duration-500 shadow-md border
                   ${
                     active
-                      ? "w-96 scale-105 opacity-100 bg-white"
-                      : "w-72 scale-90 opacity-40 bg-gray-100"
+                      ? "scale-100 opacity-100 bg-white"
+                      : "scale-90 opacity-60 bg-gray-100"
                   }`}
               >
                 <CardContent className="p-7">
