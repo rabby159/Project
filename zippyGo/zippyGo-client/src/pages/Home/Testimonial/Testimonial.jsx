@@ -73,15 +73,7 @@ const Testimonial = () => {
     <div className="max-w-5xl mx-auto my-20 text-center px-4">
       <h2 className="text-3xl font-semibold mb-10">What Our Customers Say</h2>
 
-      <div className="flex items-center justify-center gap-5">
-        {/* Left Arrow */}
-        <button
-          onClick={prevSlide}
-          className="p-3 bg-gray-200 rounded-full hover:bg-gray-300 transition"
-        >
-          <ChevronLeft />
-        </button>
-
+      <div className="">
         {/* Slider Cards */}
         <div className="grid grid-cols-3 items-center justify-center gap-7">
           {[leftIndex, centerIndex, rightIndex].map((slideIndex, pos) => {
@@ -91,7 +83,7 @@ const Testimonial = () => {
             return (
               <Card
                 key={t.id}
-                className={`transition-transform duration-500 shadow-md border
+                className={`duration-300 ease-linear shadow-md border
                   ${
                     active
                       ? "scale-100 opacity-100 bg-white"
@@ -116,27 +108,34 @@ const Testimonial = () => {
             );
           })}
         </div>
-
-        {/* Right Arrow */}
-        <button
-          onClick={nextSlide}
-          className="p-3 bg-gray-200 rounded-full hover:bg-gray-300 transition"
-        >
-          <ChevronRight />
-        </button>
-      </div>
-
-      {/* Dots */}
-      <div className="flex justify-center mt-6 gap-2">
-        {testimonials.map((_, i) => (
+        <div className="flex items-center justify-center gap-5 mt-5">
+          {/* Left Arrow */}
           <button
-            key={i}
-            onClick={() => setIndex(i)}
-            className={`h-3 rounded-full transition-all ${
-              i === index ? "bg-orange-500 w-6" : "bg-gray-400 w-3"
-            }`}
-          ></button>
-        ))}
+            onClick={prevSlide}
+            className="p-2 bg-gray-200 rounded-full hover:bg-gray-300 transition"
+          >
+            <ChevronLeft />
+          </button>
+          {/* Dots */}
+          <div className="flex justify-center gap-2">
+            {testimonials.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setIndex(i)}
+                className={`h-3 rounded-full transition-all ${
+                  i === index ? "bg-orange-500 w-6" : "bg-gray-400 w-3"
+                }`}
+              ></button>
+            ))}
+          </div>
+          {/* Right Arrow */}
+          <button
+            onClick={nextSlide}
+            className="p-2 bg-gray-200 rounded-full hover:bg-gray-300 transition"
+          >
+            <ChevronRight />
+          </button>
+        </div>
       </div>
     </div>
   );
